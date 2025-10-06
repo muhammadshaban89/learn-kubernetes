@@ -38,13 +38,18 @@ Solution:
  Install Dependencies: 
 
 	sudo apt-get update -y
-	sudo apt install -y git golang-go
+	wget https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
+    sudo tar -C /usr/local -xzf go1.21.5.linux-amd64.tar.gz
 
+Update path & verify version.
 
+	export PATH=/usr/local/go/bin:$PATH
+    echo 'export PATH=/usr/local/go/bin:$PATH' >> ~/.bashrc
+    source ~/.bashrc
+	
  Clone the Repository
 
 	git clone https://github.com/Mirantis/cri-dockerd.git
-	
 	cd cri-dockerd
 
  Build the Binary
@@ -78,15 +83,16 @@ When starting Minikube, explicitly point to the CRI socket:
 Kubernetes dropped native Docker support in v1.24+, so cri-dockerd acts as a bridge between Docker and Kubernetes' CRI. Without it, Kubernetes can't talk to Docker directly anymore.
 
 If face Container Networking Plugins Error:
-Install Container Networking Plugins (CNI)
+-------------------------------------------
 
+Install Container Networking Plugins (CNI)
 Set the Version
-   
-     Pick a stable version — for example:
+
+    Pick a stable version — for example:
 	CNI_PLUGIN_VERSION="v1.3.0"
 
  Download the Plugin Archive
-
+ 
 	CNI_PLUGIN_TAR="cni-plugins-linux-amd64-$CNI_PLUGIN_VERSION.tgz"
 	curl -LO "https://github.com/containernetworking/plugins/releases/download/$CNI_PLUGIN_VERSION/$CNI_PLUGIN_TAR"
 
