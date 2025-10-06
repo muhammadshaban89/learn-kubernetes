@@ -1,8 +1,8 @@
 
-How to start minikube , especially when using the none driver.
+How to start minikube ,  when using the none driver.
 ---------------------------------------------------------------
 
-Here’s how you can fix it step-by-step:
+Here’s how you can do it  step-by-step:
 
 🛠️ Install crictl on Ubuntu
  Download the latest release:
