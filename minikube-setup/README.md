@@ -1,18 +1,20 @@
 What is minikube?
-
+------------------
 Minikube is a lightweight tool that lets you run a local Kubernetes cluster on your machine—perfect for development, testing, and learning.
 
-How to setup minikube?
+How to setup minikube on an ubuntu machine?
 
 Prerequisites:
 --------------
 Before starting the installation process, ensure that the following prerequisites are met:
 
-1:You have at least  Ubuntu 18.04 or higher server available for creating the cluster.
-2:Each server has at least 2GB of RAM and 2 CPU cores.
+1:You have at least  one Ubuntu 18.04 or higher server available for creating the cluster.
+2:server has at least 2GB of RAM and 2 CPU cores.
 3:You have root access to each server.
 
 Installation Steps:
+--------------------
+
 The following are the step-by-step instructions for setting up a minikube on Ubuntu.
 
 1:Update the system's package list and install necessary dependencies using the following commands:
