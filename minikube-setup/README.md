@@ -1,4 +1,4 @@
-Whatis minikube?
+What is minikube?
 
 Minikube is a lightweight tool that lets you run a local Kubernetes cluster on your machine—perfect for development, testing, and learning.
 
