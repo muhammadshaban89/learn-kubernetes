@@ -1,5 +1,6 @@
 
 How to start minikube , especially when using the none driver.
+---------------------------------------------------------------
 
 Here’s how you can fix it step-by-step:
 
@@ -32,6 +33,7 @@ If facing ERROR!
 - https://github.com/Mirantis/cri-dockerd
   
 Solution:
+----------
 ⚙️ Step-by-Step: Install cri-dockerd on Ubuntu.
  Install Dependencies: 
 
