@@ -63,8 +63,9 @@ which is a powerful tool used to interact with the Linux kernel's connection tra
 • NAT troubleshooting: Inspect how connections are being translated.
 • Container networking: Useful in Kubernetes and Docker environments where connection tracking affects pod/service communication.
 
-7: Start Minikube
+7: Start Minikube:
 
-  #minikube start --driver=docker
- 		 Or
-to start it with driver=none (Better if you want to learn k8s networking).but it requires additional steps as Kubernetes dropped native Docker support in v1.24+, so cri-dockerd acts as a bridge between Docker and Kubernetes' CRI. Without it, Kubernetes can't talk to Docker directly anymore.
+    minikube start --driver=docker
+ 	
+		 Or
+to start it with "driver=none" (Better if you want to learn k8s networking).but it requires additional steps as Kubernetes dropped native Docker support in v1.24+, so cri-dockerd acts as a bridge between Docker and Kubernetes' CRI. Without it, Kubernetes can't talk to Docker directly anymore.
