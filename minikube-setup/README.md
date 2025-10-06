@@ -3,7 +3,7 @@ What is minikube?
 Minikube is a lightweight tool that lets you run a local Kubernetes cluster on your machine—perfect for development, testing, and learning.
 
 How to setup minikube on an ubuntu machine?
-
+--------------------------------------------
 Prerequisites:
 --------------
 Before starting the installation process, ensure that the following prerequisites are met:
