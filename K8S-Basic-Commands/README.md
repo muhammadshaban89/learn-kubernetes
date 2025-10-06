@@ -1,7 +1,7 @@
 Some important commands:
 -----------------------------
 
- To create any object using file.ym
+ To create any object using file.yml
  
      kubectl apply -f filename
 
