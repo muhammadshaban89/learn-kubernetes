@@ -4,6 +4,12 @@ Some important commands:
  To create any object using file.yml
  
      kubectl apply -f filename
+To delete any object.
+
+	kubectl delete pod podname
+OR
+	   
+	   kubectl delete -f file.yml
 
 To check pods
 
