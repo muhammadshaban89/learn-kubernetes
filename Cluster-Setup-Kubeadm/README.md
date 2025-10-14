@@ -130,6 +130,6 @@ create pod:
  			
 	kubectl run mypod --image=alpine --restart=Never --command -- sh -c "echo Hello && sleep 10"
 	
-Get Pod Details: (In output check "NODE" to verify the node where pode is created.)
+Get pod deetails- (in the output check "NODE" to verify the node where pode is created.)
 		
 		kubecel get pods -o wide   
