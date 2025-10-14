@@ -28,7 +28,7 @@ Update the system's package list and install necessary dependencies using the fo
 
 	sudo apt-get update
 	sudo apt install apt-transport-https curl -y
-	sudo apt-get nstall containerd
+	sudo apt-get install containerd
 To install Containerd, use the following commands:
 
 	sudo mkdir -p /etc/apt/keyrings
