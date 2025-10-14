@@ -137,3 +137,5 @@ create pod:
 Get pod deetails- (in the output check "NODE" to verify the node where pode is created.)
 		
 		kubecel get pods -o wide   
+		<img width="1106" height="62" alt="image" src="https://github.com/user-attachments/assets/aeb6f9bb-42df-4ebf-8c08-550992c3e488" />
+
