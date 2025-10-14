@@ -129,6 +129,7 @@ To verify either node joined or not run following command on master node.
 		kubectl get nodes
 You can verify pods creation on worker node by creating a pode either with command-line or with a manifest.
 As an example run below commands to create a pod and verify its placement on worker node.
+
 create pod:
  			
 	kubectl run mypod --image=alpine --restart=Never --command -- sh -c "echo Hello && sleep 10"
