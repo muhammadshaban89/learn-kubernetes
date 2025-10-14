@@ -118,7 +118,7 @@ The command will output a token that can be used to join the node to the cluster
 
 Print Full Join Command Automatically
 -------------------------------------
-This prints the full command with token and hash included. run the command on worker node.
+This prints the full command with token and hash included. run the command on master node.
 
 	sudo kubeadm token create --print-join-command
 
