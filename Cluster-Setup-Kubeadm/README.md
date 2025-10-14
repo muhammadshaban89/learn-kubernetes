@@ -105,3 +105,10 @@ Join Nodes
 
 To add nodes to the cluster, run the kubeadm join command with the appropriate arguments on each node. 
 The command will output a token that can be used to join the node to the cluster.
+
+Print Full Join Command Automatically
+-------------------------------------
+This prints the full command with token and hash included.
+
+	sudo kubeadm token create --print-join-command
+	
