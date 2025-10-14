@@ -29,6 +29,7 @@ Update the system's package list and install necessary dependencies using the fo
 	sudo apt-get update
 	sudo apt install apt-transport-https curl -y
 	sudo apt-get install containerd
+	
 To install Containerd, use the following commands:
 
 	sudo mkdir -p /etc/apt/keyrings
@@ -93,7 +94,8 @@ Create a .kube directory in your home directory:
 Copy the Kubernetes configuration file to your home directory:
 
 	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-	Change ownership of the file:
+	
+Change ownership of the file:
 
 	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 	
