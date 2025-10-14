@@ -33,3 +33,43 @@ Think of a pod like a shipping container:
 • 	It travels with its own network and storage.
 
 • 	Kubernetes is the logistics system that deploys, tracks, and replaces these containers as needed.
+
+pod commands:
+-------------
+
+🚀 Pod Lifecycle Commands.(run, get,describe,delete pods)
+
+    kubectl run mypod --image=nginx --restart=Never 
+    kubectl get pods 
+    kubectl get pods -n <namespace> 
+    kubectl describe pod <pod-name> 
+    kubectl delete pod <pod-name> 
+    
+🔍 Pod Inspection & Debugging
+
+    kubectl logs <pod-name> 
+    kubectl logs <pod-name> -c <container-name> 
+    kubectl exec -it <pod-name> -- bash 
+    kubectl port-forward <pod-name> 8080:80 
+    kubectl get pod <pod-name> -o wide 
+
+🧪 Advanced Pod Usage
+
+    kubectl run debug --image=busybox --restart=Never --command -- sleep 3600 
+    kubectl apply -f pod.yaml 
+    kubectl delete pods -l app=myapp 
+    kubectl get pods --watch 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
