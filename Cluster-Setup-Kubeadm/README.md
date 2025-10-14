@@ -81,7 +81,7 @@ Add some settings to sysctl
 
 	sudo sysctl -w net.ipv4.ip_forward=1
 	
-Initialize the Cluster (Run only on master)
+Initialize the Cluster --Run only on master.
 ----------------------------------------------
 
 Use the following command to initialize the cluster:
@@ -97,9 +97,12 @@ Copy the Kubernetes configuration file to your home directory:
 
 	sudo chown $(id -u):$(id -g) $HOME/.kube/config
 	
-Install Flannel (Run only on master)
+Install Flannel -Run only on master
 -------------------------------------
-Use the following command to install Flannel:
+Flannel is a simple and popular Container Network Interface (CNI) plugin used with "kubeadm" to provide pod-to-pod networking across nodes in a Kubernetes cluster.
+Kubernetes requires that every pod can communicate with every other pod in the cluster, regardless of which node they’re on. Flannel enables this by creating an overlay network that routes traffic between pods using virtual interfaces
+
+Use the following command to install Flannel.
 
 	kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
 Verify Installation
