@@ -20,7 +20,7 @@ Before starting the installation process, ensure that the following prerequisite
 
 Installation Steps:
 -------------------
-Note:( Steps are same for master and worker node. Commands the need to run only on master node as specified explicitly to run only on master node.)
+Note:( Steps are same for master and worker node. Commands the need to run only on master node are specified explicitly to run only on master node.)
 
 The following are the step-by-step instructions for setting up a multi-node Kubernetes cluster using Kubeadm:
 
