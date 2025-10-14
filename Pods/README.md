@@ -6,16 +6,22 @@ In Kubernetes (K8s), a pod is the smallest and most basic deployable unit. It re
 🧩 Key Features of a Pod
 -------------------------
 
-• 	One or more containers:
+• One or more containers:
 Most pods run a single container, but you can run multiple tightly coupled containers (e.g., sidecars).
 
-• 	Shared resources:
-• 	Network: 
+• Shared resources:
+
+• Network: 
+
 All containers in a pod share the same IP address and port space.
-• 	Volumes: 
+
+• Volumes: 
+
 Shared storage can be mounted across containers.
-• 
-Ephemeral by design: Pods are not meant to be long-lived. If a pod dies, Kubernetes can replace it via controllers like Deployments or ReplicaSets.
+ 
+Ephemeral by design: 
+
+Pods are not meant to be long-lived. If a pod dies, Kubernetes can replace it via controllers like Deployments or ReplicaSets.
 
 Real-World Analogy.
 -------------------
