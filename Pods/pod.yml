@@ -4,7 +4,7 @@ metadata:
   name: mypod
 spec:
   containers:
-  - name: mycontainer
-    image: nginx
+  - name: mycontainer   #name of conatiner which will run inside pod
+    image: nginx        #container image
     ports:
-    - containerPort: 80
+    - containerPort: 80   
