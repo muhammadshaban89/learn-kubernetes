@@ -20,6 +20,8 @@ Before starting the installation process, ensure that the following prerequisite
 
 Installation Steps:
 -------------------
+Note:( Steps are same for master and worker node. Commands the need to run only on master node as specified explicitly to run only on master node.)
+
 The following are the step-by-step instructions for setting up a multi-node Kubernetes cluster using Kubeadm:
 
 Update the system's package list and install necessary dependencies using the following commands:
@@ -78,7 +80,10 @@ Enable kernel modules
 Add some settings to sysctl
 
 	sudo sysctl -w net.ipv4.ip_forward=1
+	
 Initialize the Cluster (Run only on master)
+----------------------------------------------
+
 Use the following command to initialize the cluster:
 
 	sudo kubeadm init --pod-network-cidr=10.244.0.0/16
@@ -91,7 +96,9 @@ Copy the Kubernetes configuration file to your home directory:
 	Change ownership of the file:
 
 	sudo chown $(id -u):$(id -g) $HOME/.kube/config
+	
 Install Flannel (Run only on master)
+-------------------------------------
 Use the following command to install Flannel:
 
 	kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
@@ -100,8 +107,8 @@ Verify that all the pods are up and running:
 
 	kubectl get pods --all-namespaces
 
-Join Nodes
-------------
+How to Join Nodes?
+-----------------
 
 To add nodes to the cluster, run the kubeadm join command with the appropriate arguments on each node. 
 The command will output a token that can be used to join the node to the cluster.
@@ -112,8 +119,17 @@ This prints the full command with token and hash included. run the command on wo
 
 	sudo kubeadm token create --print-join-command
 
-To verify either node joined or not run following commond on master node.
+To verify either node joined or not run following command on master node.
+	This command will show status pf each node(control-plan and worker nodes). 
+	Status must be "Ready".
 	
-		kubeadm get nodes
+		kubectl get nodes
+You can verify pods creation on worker node by creating a pode either with command-line or with a manifest.
+As an example run below commands to create a pod and verify its placement on worker node.
+create pod:
+ 			
+	kubectl run mypod --image=alpine --restart=Never --command -- sh -c "echo Hello && sleep 10"
 	
-	
+Get Pod Details: (In output check "NODE" to verify the node where pode is created.)
+		
+		kubecel get pods -o wide   
