@@ -129,7 +129,7 @@ Labels:
       containers:
         - name: cont1
           image: ubuntu
-           command: ["/bin/bash", "-c", "while true; do echo Hello-World; sleep 5 ; done"]
+          command: ["/bin/bash", "-c", "while true; do echo Hello-World; sleep 5 ; done"]
 
 Description:
 
