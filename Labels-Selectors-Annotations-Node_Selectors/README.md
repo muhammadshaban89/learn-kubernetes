@@ -113,6 +113,33 @@ Used for:
  - Apply network policy to group
  
 
+Examples.
+--------
+
+Labels:
+
+    kind: Pod
+    apiVersion: v1
+    metadata:
+      name: mypod1
+      labels:
+        env: development
+        class: pods
+    spec:
+      containers:
+        - name: cont1
+          image: ubuntu
+           command: ["/bin/bash", "-c", "while true; do echo Hello-World; sleep 5 ; done"]
+
+Description:
+
+Above manifest will create a pod "mypod1" with labels "env=development, class=pods".You can verify it by:
+
+    kubectl get pods --show-labels
+    
+Labels make easy to filter selection as per desire,for example to delete a pod with matching labels.
+
+        kubectle delete pods -l class=pods
 
 
 
