@@ -3,10 +3,14 @@
 --------------------------------
 
 Labels are key-value pairs attached to Kubernetes objects (like pods, nodes, services) that help you identify and group resources.
+
 ✅ Use Cases:
+
 • Select pods for a Deployment or Service
-• Filter resources with 
-• Organize environments (e.g., , )
+
+• Filter resources.
+
+• Organize environments.
 
 📌 Example:
 
@@ -21,6 +25,7 @@ metadata:
 Annotations are also key-value pairs, but they’re used to store non-identifying metadata — things that don’t affect selection or scheduling.
 
 ✅ Use Cases:
+
 - Attach build info, version, or contact details
 - Store external tool data (e.g., monitoring configs)
 - Add notes for automation or CI/CD systems
@@ -48,13 +53,15 @@ Node selectors are used to schedule pods onto specific nodes based on labels ass
 📌 Example:
 
 Label your node:
-kubectl label nodes node-1 disktype=ssd
+
+    kubectl label nodes node-1 disktype=ssd
 
 
 Then in your pod spec:
-spec:
-  nodeSelector:
-    disktype: ssd
+
+    spec:
+      nodeSelector:
+        disktype: ssd
 
 📝 what are Selectors ?
 -----------------------
@@ -65,6 +72,7 @@ They’re essential for grouping, filtering, and managing resources like pods, s
 🧩 Types of Selectors
 
 1. Label Selectors
+
 These match objects based on their labels.
 
 • Equality-based:
