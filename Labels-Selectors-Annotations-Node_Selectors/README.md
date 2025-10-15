@@ -166,6 +166,6 @@ Pode will not be created & remain pending if no matching labels on node. Node se
 To label a node
 
     kubectl label nodes node_name key=value
-    kubectl label nodes nodeselector env=development
+    kubectl label nodes ubuntu2004 env=development
     
 
