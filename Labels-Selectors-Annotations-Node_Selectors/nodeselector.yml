@@ -1,9 +1,11 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nodeselector
+  name: mynodeselector
   labels:
     env: development
+  annotations:
+    maintainer: "Muhammad Shaban" 
 spec:
   containers:
     - name: cont2
