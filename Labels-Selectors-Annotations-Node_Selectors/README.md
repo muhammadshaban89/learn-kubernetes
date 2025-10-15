@@ -163,9 +163,20 @@ Above manifest will create a pod "nodeselector" on a node havig label "env=devel
 
 Pode will not be created & remain pending if no matching labels on node. Node selectors are usefull if you want to deploy a pod on a specfic node for any reason i.e for testing.
 
-To label a node
+To label a node.
+
+first get desired node 
+
+    kubectl get nodes
+    
+OR for detail info
+
+    kubectl get nodes -o wide
+label the node:
 
     kubectl label nodes node_name key=value
     kubectl label nodes ubuntu2004 env=development
-    
+check labels on node:
 
+     kubectle get nodes --show-labels
+After labeling you will see the pod creation has been completed.
