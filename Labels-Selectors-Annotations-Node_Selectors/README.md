@@ -168,11 +168,11 @@ Pode will not be created & remain pending if no matching labels on node. Node se
 
 To label a node.
 
-first get desired node 
+- first get desired node 
 
-    kubectl get nodes
+      kubectl get nodes
     
-OR for detail info
+or, for detail info---
 
     kubectl get nodes -o wide
 label the node:
