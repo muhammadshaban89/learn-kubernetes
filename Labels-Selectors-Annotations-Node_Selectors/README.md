@@ -141,6 +141,31 @@ Labels make easy to filter selection as per desire,for example to delete a pod w
 
         kubectle delete pods -l class=pods
 
+Nodes Selectors:
 
+    kind: Pod
+    apiVersion: v1
+    metadata:
+      name: nodeselector
+      labels:
+        env: development
+    spec:
+      containers:
+        - name: c2
+          image: ubuntu
+          command: ["/bin/bash", "-c", "while true; do echo Learn-Nodeselectors; sleep 5 ; done"]
+      nodeSelector:                                         
+        env: development
 
+Description:
+
+Above manifest will create a pod "nodeselector" on a node havig label "env=development".
+
+Pode will not be created & remain pending if no matching labels on node. Node selectors are usefull if you want to deploy a pod on a specfic node for any reason i.e for testing.
+
+To label a node
+
+    kubectl label nodes node_name key=value
+    kubectl label nodes nodeselector env=development
+    
 
