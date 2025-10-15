@@ -104,7 +104,7 @@ Used for:
 • Filtering by status, name, or node.
 • Scripting and automation.
 
-🧠 Real-World Use Cases
+ Real-World Use Cases
 -----------------------
 
  - Target pods for a service.
