@@ -187,5 +187,12 @@ After labeling, you will see the pod creation has been completed.
 To check annotations, run
 
     kubectl describe pods podname
+    
+How to relabel a node.
 
+    kubectl label nodes <node-name> <key>=<new-value> --overwrite
+        
+How to remove label. (use - after keyvalue . suppose node was labeled as disktype=ssd  to relabel it --> disktype-)
 
+    kubectl label nodes <node-name> <label-key>-
+    kubectl label nodes ubuntu2004 disktype-
