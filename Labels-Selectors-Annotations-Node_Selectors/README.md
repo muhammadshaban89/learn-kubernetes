@@ -32,10 +32,10 @@ Annotations are also key-value pairs, but they’re used to store non-identifyin
 
 📌 Example:
 
-metadata:
-  annotations:
-    buildVersion: "v1.2.3"
-    maintainer: "Muhammad Shaban"
+    metadata:
+      annotations:
+        buildVersion: "v1.2.3"
+        maintainer: "Muhammad Shaban"
 
 
 
