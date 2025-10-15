@@ -14,10 +14,10 @@ Labels are key-value pairs attached to Kubernetes objects (like pods, nodes, ser
 
 📌 Example:
 
-metadata:
-  labels:
-    app: nginx
-    env: production
+    metadata:
+      labels:
+        app: nginx
+        env: production
 
 📝 What are Annotations?
 -------------------------
