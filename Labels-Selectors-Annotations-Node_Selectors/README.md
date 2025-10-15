@@ -149,6 +149,8 @@ Nodes Selectors:
       name: nodeselector
       labels:
         env: development
+      annotations:  
+        maintainer: "Muhammad Shaban"  
     spec:
       containers:
         - name: c2
@@ -179,4 +181,10 @@ label the node:
 check labels on node:
 
      kubectle get nodes --show-labels
-After labeling you will see the pod creation has been completed.
+After labeling, you will see the pod creation has been completed.
+
+To check annotations, run
+
+    kubectl describe pods podname
+
+
