@@ -23,36 +23,6 @@ Inject values from a ConfigMap:
       - configMapRef:
         name: app-config
         
-✅Example:
---------
-
-✅Prerequisites
-
-Before getting started, you need to have the following:
-
-- A Kubernetes cluster up and running
-
-- A Docker image of your application.
-
-Follow the commands below to use environment variables in Kubernetes:
-
-Step 1: Build your Docker image by running the following command:
-	
-	docker build -t wordpress .
-Step 2: Apply your YAML files by running the following command:
-
-	kubectl apply -f <file-name>
-Step 3: To see the list of pods, run the following command:
-	
-	kubectl get pods
-Step 4: To check the logs of a pod, run the following command:
-		
-	kubectl logs <pod-name>
-Step 5: To print the environment variables of a pod, run the following command:
-
-	kubectl exec <pod-name> -- printenv
-
-
 
 Or reference a specific key:
 
@@ -95,7 +65,6 @@ Before getting started, you need to have the following:
 - A Kubernetes cluster up and running
 
 - A Docker image of your application.
-- 
 
 Yaml manifest:
 ------------
