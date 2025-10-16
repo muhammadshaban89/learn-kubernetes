@@ -76,6 +76,8 @@ Replica Sets :
 
 Key difference between Pods, Replica controllers and replica sets.
 ------------------------------------------------------------------
+Pods:
+
 A Pod is the smallest deployable unit in Kubernetes. It wraps one or more containers that share the same network namespace and storage. 
 Pods are ephemeral — if a pod crashes or is deleted, it won’t come back unless something is managing it. You typically use standalone pods for testing, debugging, or very simple workloads.
 
