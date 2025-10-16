@@ -91,7 +91,9 @@ A ReplicaSet is the modern version of ReplicationController. It also ensures a f
 🧠 Summary :
 ------------
 • 	Pods are the actual running containers, but they don’t self-heal.
+
 • 	ReplicationControllers were the original way to keep pods alive, but they’re outdated.
+
 • 	ReplicaSets do the same job as RCs but with more flexibility and are typically used under the hood by Deployments.
                     
 
