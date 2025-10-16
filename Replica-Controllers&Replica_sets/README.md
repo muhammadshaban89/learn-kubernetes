@@ -105,20 +105,20 @@ To get, delete replica-set and replica controller
 
     kubectl get rs 
     kubectl get rc
-    kubectl delete rc/myrc
-    kubectl delete rs/myrs
+    kubectl delete rc/rc-name
+    kubectl delete rs/rs-name
 To scale replicas
 
-    kubectl scale --replicas=N rc/myrc
+    kubectl scale --replicas=N rc/rc-name
   or
     
     kubectl scale --replicas=N rc -l xyz=abc   # with repect to lable 
   
 To scale up rs through deployment 
 
-    kubectl scale --replicas=3 deploy mydeployments
+    kubectl scale --replicas=3 deploy deployment_name
 
-status
+status/history of rollout.
 
     kubectl rollout status deploy mydeployments
 
@@ -130,5 +130,4 @@ rollout to last version
     
 To rollout to a specific version
 
-    kubectl rollout undo deployment mydeployments --to-revision=1
-
+    kubectl rollout undo deployment deployement_name --to-revision=1
