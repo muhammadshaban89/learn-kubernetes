@@ -90,14 +90,45 @@ ReplicaSet (RS)
 
 A ReplicaSet is the modern version of ReplicationController. It also ensures a fixed number of pod replicas are running, but it supports more flexible label selectors — including set-based expressions like “In”, “NotIn”, and “Exists”. ReplicaSets are rarely used directly; instead, they’re managed by Deployments, which add rolling updates, rollbacks, and declarative management.
 
-🧠 Summary :
+Summary :
 ------------
 • 	Pods are the actual running containers, but they don’t self-heal.
 
 • 	ReplicationControllers were the original way to keep pods alive, but they’re outdated.
 
 • 	ReplicaSets do the same job as RCs but with more flexibility and are typically used under the hood by Deployments.
-                    
 
+Importent Commands:
+------------------
 
+To get, delete replica-set and replica controller
+
+    kubectl get rs 
+    kubectl get rc
+    kubectl delete rc/myrc
+    kubectl delete rs/myrs
+To scale replicas
+
+    kubectl scale --replicas=N rc/myrc
+  or
+    
+    kubectl scale --replicas=N rc -l xyz=abc   # with repect to lable 
+  
+To scale up rs through deployment 
+
+    kubectl scale --replicas=3 deploy mydeployments
+
+status
+
+    kubectl rollout status deploy mydeployments
+
+    kubectl rollout history deploy mydeployments
+
+rollout to last version
+
+    kubectl rollout undo deploy/mydeployments
+    
+To rollout to a specific version
+
+    kubectl rollout undo deployment mydeployments --to-revision=1
 
