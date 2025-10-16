@@ -90,7 +90,7 @@ To print environment variables:
 
     kubectl exec <pod-name> -- printenv
     
- You can use grep to filter outout   
+ You can use grep to filter output   
 
      kubectl exec <pod-name> -- printenv |  grep -i  WORDPRESS_VERSION
 
