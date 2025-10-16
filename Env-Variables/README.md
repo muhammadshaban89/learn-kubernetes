@@ -93,3 +93,15 @@ To print environment variables:
  You can use grep to filter outout   
 
      kubectl exec <pod-name> -- printenv |  grep -i  WORDPRESS_VERSION
+
+🔑 Common Use Cases for env in K8s
+------------------------------------
+
+- Configuration Management:  Pass runtime settings like log levels, feature flags, or app modes
+- Secrets Injection: Securely inject credentials using Kubernetes Secrets
+- Service Discovery: Provide internal service endpoints or ports to containers
+- Environment Differentiation: Distinguish between dev, staging, and prod setups
+- Metadata Access: Inject pod or node info (e.g., pod name, namespace) using fieldRef
+- Bulk Config Injection: Load multiple variables from a ConfigMap or Secret using envFrom
+- Tooling & Automation: Set paths, flags, or credentials for CLI tools and automation scripts
+
