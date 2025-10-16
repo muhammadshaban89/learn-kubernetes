@@ -1,11 +1,11 @@
-🧩Environment Variables in Kubernetes
+✅Environment Variables in Kubernetes
 ---------------------------------------
 
 Environment variables allow you to store configuration data separately from your application code, making it easier to manage and update your application.
 In Kubernetes, environment variables are used to pass configuration data into containers at runtime. 
 They help you customize behavior without modifying your application code.
 
-🧩 Ways to Define Environment Variables in Kubernetes
+✅ Ways to Define Environment Variables in Kubernetes
 
 ✅ 1. Static Key-Value Pairs
 
