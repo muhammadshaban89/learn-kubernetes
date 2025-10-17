@@ -122,7 +122,7 @@ Then during rollback:
 
 That is ,If your current Deployment has 4 replicas and you roll back to a previous version whose ReplicaSet originally had 2 replicas, the result will be:
 
-The previous ReplicaSet will be scaled to 4 replicas, not 2.
+    The previous ReplicaSet will be scaled to 4 replicas, not 2.
 
 Why?
 
