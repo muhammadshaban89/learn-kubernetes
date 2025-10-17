@@ -158,9 +158,9 @@ To rollout to last version
     kubectl rollout undo deploy/<deployment-name>
 
 
-To rollout to a specific version
+To rollout to a specific version "N".(N=1,2,3,....)
 
-    kubectl rollout undo deployment <deployment-name> --to-revision=1
+    kubectl rollout undo deployment <deployment-name> --to-revision=N
     
 To scale up or down replicasets  to "N" numbers:
 
