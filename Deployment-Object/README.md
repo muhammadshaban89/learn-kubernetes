@@ -9,8 +9,11 @@ It provides declarative updates, self-healing, and version control — making it
 A Deployment defines:
 
 • What your app should look like (image, ports, labels)
+
 • How many replicas should run
+
 • How updates should be rolled out
+
 • How to recover from failures
 
 It automatically creates and manages a ReplicaSet, which in turn manages the actual Pods.
