@@ -162,7 +162,7 @@ To rollout to a specific version
 
     kubectl rollout undo deployment <deployment-name> --to-revision=1
     
-To scale up or dow  replicasets  to "N" numbers:
+To scale up or down replicasets  to "N" numbers:
 
     kubectl scale --replicas=N deploy <deployment-name>
 
