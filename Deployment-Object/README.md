@@ -44,7 +44,7 @@ Example Deployment YAML
       spec:
         containers:
         - name: myapp-container
-          image: myapp:1.0
+          image: nginx
           ports:
           -  containerPort: 8080
 
