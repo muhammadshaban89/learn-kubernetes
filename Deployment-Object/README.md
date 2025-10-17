@@ -95,6 +95,38 @@ If you delete a ReplicaSet:
 - It recreates a new ReplicaSet with the same pod template.
 - This triggers a fresh rollout of pods.
 
+What Happens During a Rollback?
+-----------------------------------
+
+When you roll back a Deployment to a previous version in Kubernetes, the ReplicaSet count typically remains the same — meaning:
+
+-	The new ReplicaSet created during rollback will have the same number of replicas as the Deployment's  field.
+
+- 	The old ReplicaSet (from the version you're rolling back from) will be scaled down to zero.
+
+- Kubernetes identifies the previous ReplicaSet that matches the earlier pod template.
+- 	It scales up that ReplicaSet to the desired replica count (e.g., 3).
+- 	It scales down the current ReplicaSet to zero.
+- 	The Deployment’s history is updated to reflect the rollback.
+
+If your Deployment has:
+    
+    spec:
+     replicas: 3
+     
+Then during rollback:
+
+• 	The previous ReplicaSet is scaled to 3 replicas.
+
+• 	The current (faulty) ReplicaSet is scaled to 0 replicas.
+
+That is ,If your current Deployment has 4 replicas and you roll back to a previous version whose ReplicaSet originally had 2 replicas, the result will be:
+
+The previous ReplicaSet will be scaled to 4 replicas, not 2.
+Why?
+• 	Kubernetes rolls back the pod template, not the replica count.
+• 	The Deployment’s  field remains unchanged unless you explicitly modify it.
+• 	So even if the previous ReplicaSet was created with 2 replicas, during rollback it will be scaled to match the current desired count — which is 4.
  
 Summary:
 --------
