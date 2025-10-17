@@ -18,7 +18,7 @@ A Deployment defines:
 
 It automatically creates and manages a ReplicaSet, which in turn manages the actual Pods.
 
-📦 Key Features
+Key Features
 -------------------
 
 - Declarative updates: You describe the desired state, Kubernetes makes it happen.
@@ -26,7 +26,7 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
 - Rollbacks: Revert to a previous version if something breaks.
 - Self-healing: Automatically replaces failed pods.
 
-📝 Example Deployment YAML
+Example Deployment YAML
 
     apiVersion: apps/v1
     kind: Deployment
@@ -48,10 +48,10 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
           ports:
           -  containerPort: 8080
 
-🏷️ Naming Conventions
+Naming Conventions
 ----------------------
 
-✅ Pod Names:
+Pod Names:
 
 - If created by a ReplicaSet or Deployment, pod names follow this pattern:
 
@@ -59,7 +59,7 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
 
 - Example: nginx-rs-7d9f4f6c9b-abcde
 
-✅ ReplicaSet Names
+ReplicaSet Names
 
 - If created by a Deployment, the name includes a hash of the pod template:
 
@@ -68,7 +68,7 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
 
 - Example: nginx-deployment-7d9f4f6c9b
 
-✅ Deployment Names:
+Deployment Names:
 
 - You define this directly in your manifest:
 
