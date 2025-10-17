@@ -127,7 +127,9 @@ That is ,If your current Deployment has 4 replicas and you roll back to a previo
 Why?
 
 • 	Kubernetes rolls back the pod template, not the replica count.
+
 • 	The Deployment’s  field remains unchanged unless you explicitly modify it.
+
 • 	So even if the previous ReplicaSet was created with 2 replicas, during rollback it will be scaled to match the current desired count — which is 4.
  
 Summary:
