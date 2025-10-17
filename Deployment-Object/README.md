@@ -19,6 +19,7 @@ A Deployment defines:
 It automatically creates and manages a ReplicaSet, which in turn manages the actual Pods.
 
 📦 Key Features
+-------------------
 
 - Declarative updates: You describe the desired state, Kubernetes makes it happen.
 - Rolling updates: Gradually replaces old pods with new ones.
@@ -48,6 +49,7 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
           -  containerPort: 8080
 
 🏷️ Naming Conventions
+----------------------
 
 ✅ Pod Names:
 
@@ -74,6 +76,7 @@ It automatically creates and manages a ReplicaSet, which in turn manages the act
         name: nginx-deployment
 
 What Happens When a Pod Is Deleted?
+-----------------------------------
 
 If a pod managed by a ReplicaSet or Deployment is manually deleted:
 
@@ -82,6 +85,7 @@ If a pod managed by a ReplicaSet or Deployment is manually deleted:
 - The new pod will have a different name (new random suffix).
 
 What Happens When a ReplicaSet Is Deleted?
+-------------------------------------------
 
 If you delete a ReplicaSet:
 
@@ -99,4 +103,30 @@ Summary:
 - ReplicaSets manage pods — deleting one removes its pods.
 - Deployments manage ReplicaSets — deleting a RS under a Deployment triggers healing.
 - Naming follows a hierarchy: Deployment → RS → Pod, with hashes and suffixes for uniqueness.
+
+Some Importent Commands:
+------------------------
+
+To get deployment:
+
+    kubectl get deployment
+To check rollout status ,History , 
+
+    kubectl rollout status deploy <deployment-name>
+
+    kubectl rollout history deploy <deployment-name>
+
+To rollout to last version
+
+    kubectl rollout undo deploy/<deployment-name>
+
+
+To rollout to a specific version
+
+    kubectl rollout undo deployment <deployment-name> --to-revision=1
+    
+To scale up or dow  replicasets  to "N" numbers:
+
+    kubectl scale --replicas=N deploy <deployment-name>
+
   
