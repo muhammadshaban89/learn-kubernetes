@@ -139,6 +139,7 @@ Summary:
 - ReplicaSets manage pods — deleting one removes its pods.
 - Deployments manage ReplicaSets — deleting a RS under a Deployment triggers healing.
 - Naming follows a hierarchy: Deployment → RS → Pod, with hashes and suffixes for uniqueness.
+- Rolling back to previous version will not change change rs count to previous state unless you explicitly modify "spec:replicas" field.
 
 Some Importent Commands:
 ------------------------
