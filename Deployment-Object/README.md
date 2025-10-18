@@ -18,6 +18,18 @@ A Deployment defines:
 
 It automatically creates and manages a ReplicaSet, which in turn manages the actual Pods.
 
+ What a Deployment Does?
+ ------------------------
+• 	Creates and manages ReplicaSets, which in turn manage Pods.
+
+• 	Ensures the desired number of Pods are running at all times.
+
+• 	Supports rolling updates and rollbacks.
+
+• 	Automatically replaces failed Pods (self-healing).
+
+• 	Enables declarative updates to your application.
+
 Key Features
 -------------------
 
