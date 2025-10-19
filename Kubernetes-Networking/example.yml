@@ -9,7 +9,6 @@ spec:
      name: deploy
    template:
      metadata:
-       name: testpod1
        labels:
          name: deploy
      spec:
