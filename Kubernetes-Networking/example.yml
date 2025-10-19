@@ -1,19 +1,20 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mydeploy
+   name: mydeployments
 spec:
    replicas: 1
-   selector:     
+   selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     name: deploy
+     name: deployment
    template:
      metadata:
        labels:
-         name: deploy
+         name: deployment
      spec:
       containers:
-        - name: mycon1
+        - name: webcon
           image: httpd
           ports:
-           - containerPort: 8080
+            - containerPort: 80
+
