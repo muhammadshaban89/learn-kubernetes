@@ -1,0 +1,11 @@
+kind: Service                             # Defines to create "Service" type Object
+apiVersion: v1
+metadata:
+  name: my-service
+spec:
+  ports:
+    - port: 80                              
+      targetPort: 8080                  # This exposes Pods with label name=deploy on port 80, forwarding to container port 8080.
+  selector:
+    name: deploy                        #selector are sed to map cluster ip as per matching labels of pod.                   
+  type: ClusterIP                       # Specifies the service type i.e ClusterIP or NodePort
