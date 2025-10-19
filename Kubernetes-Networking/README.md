@@ -7,33 +7,33 @@ Core Principles of Kubernetes Networking:
 -----------------------------------------
 
 - Each Pod gets a unique IP address:
-  No need for port mapping between containers.
+    No need for port mapping between containers.
 
 - Flat network model:
-  All Pods can communicate with each other without NAT.
+    All Pods can communicate with each other without NAT.
 
 - Containers in a Pod share the same network namespace:
-  They can talk over localhost.
+    They can talk over localhost.
 
 - No IP masquerading between Pods: 
-  Direct routing simplifies debugging and traffic flow
+    Direct routing simplifies debugging and traffic flow
 
 Key Networking Components:
 --------------------------
 - Pod Network:
-  Assigns IPs to Pods, enabling direct communication across the cluster.
+    Assigns IPs to Pods, enabling direct communication across the cluster.
 
 - Service:
-  Provides a stable endpoint (ClusterIP, NodePort, LoadBalancer) for Pods.
+    Provides a stable endpoint (ClusterIP, NodePort, LoadBalancer) for Pods.
 
 - Ingress:
-  Manages external HTTP/S access to Services using rules and controllers.
+    Manages external HTTP/S access to Services using rules and controllers.
 
 - NetworkPolicy:
-  Controls traffic flow between Pods based on labels and rules.
+    Controls traffic flow between Pods based on labels and rules.
 
 - DNS:
-  Automatically resolves Service names to IPs within the cluster.
+    Automatically resolves Service names to IPs within the cluster.
 
 
 
@@ -42,28 +42,28 @@ Key Networking Components:
 
 - Pod-to-Pod:
   
-  Handled by the CNI (Container Network Interface) plugin (e.g., Calico, Flannel).
+    Handled by the CNI (Container Network Interface) plugin (e.g., Calico, Flannel).
   
-  containers in different Pods on the same Node can absolutely communicate.
+    containers in different Pods on the same Node can absolutely communicate.
   
-  In Kubernetes, Pod-to-Pod communication is handled by the cluster network, not by Node locality.
+    In Kubernetes, Pod-to-Pod communication is handled by the cluster network, not by Node locality.
 
 - Pod-to-Service:
   
-  Services abstract Pod IPs and offer load balancing.
+    Services abstract Pod IPs and offer load balancing.
 
 - External-to-Service:
  
-  Ingress or LoadBalancer exposes Services to the outside world.
+    Ingress or LoadBalancer exposes Services to the outside world.
 
 - Container-to-Container:
   
-  Within the same Pod, containers use localhost.
+    Within the same Pod, containers use localhost.
 
 What Is a Kubernetes Service?
 -----------------------------
 
-In Kubernetes, a Service is an abstraction that defines a logical set of Pods and a policy by which to access them—essentially acting as a stable endpoint for dynamic workloads
+  In Kubernetes, a Service is an abstraction that defines a logical set of Pods and a policy by which to access them—essentially acting   as a stable endpoint for dynamic workloads
 
 
 • Purpose: 
@@ -76,7 +76,7 @@ In Kubernetes, a Service is an abstraction that defines a logical set of Pods an
 
 • Decouples consumers from Pod IPs:
  
- Clients don’t need to track changing Pod IPs.
+   Clients don’t need to track changing Pod IPs.
 
 Types of Services
 -----------------
