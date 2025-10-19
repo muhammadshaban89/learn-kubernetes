@@ -1,16 +1,16 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-   name: mydeployments
+   name: my-newdeploy
 spec:
    replicas: 1
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
-     name: deployment
+     app: my-app
    template:
      metadata:
        labels:
-         name: deployment
+         app: my-app
      spec:
       containers:
         - name: webcon
