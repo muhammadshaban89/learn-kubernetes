@@ -93,11 +93,11 @@ Types of Services
 
 - NodePort:
   
- * Exposes the Service on a static port on each Node’s IP.
- * A NodePort is a type of Kubernetes Service that exposes your application to external traffic by opening a specific port on every Node in your cluster.
- * Allocates a port from the range 30000–32767.
- * Listens on that port on every Node’s IP address.
- * Routes traffic to the underlying Pods via the Service.
+   * Exposes the Service on a static port on each Node’s IP.
+   * A NodePort is a type of Kubernetes Service that exposes your application to external traffic by opening a specific port on every Node in your cluster.
+   * Allocates a port from the range 30000–32767.
+   * Listens on that port on every Node’s IP address.
+   * Routes traffic to the underlying Pods via the Service.
  
   So if your Node IP is 192.168.1.10 and your NodePort is 30080, external clients can access your app at:
 
