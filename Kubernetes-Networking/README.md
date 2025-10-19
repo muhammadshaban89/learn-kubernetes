@@ -40,26 +40,39 @@ Key Networking Components:
   Communication Types:
   ---------------------
 
-- Pod-to-Pod: 
+- Pod-to-Pod:
+  
   Handled by the CNI (Container Network Interface) plugin (e.g., Calico, Flannel).
 
-- Pod-to-Service: 
+- Pod-to-Service:
+  
   Services abstract Pod IPs and offer load balancing.
 
 - External-to-Service:
+ 
   Ingress or LoadBalancer exposes Services to the outside world.
 
 - Container-to-Container:
+  
   Within the same Pod, containers use localhost.
 
 What Is a Kubernetes Service?
 -----------------------------
 
-• Purpose: Exposes a set of Pods under a single DNS name and IP address, enabling reliable communication even as Pods are created or destroyed.
+In Kubernetes, a Service is an abstraction that defines a logical set of Pods and a policy by which to access them—essentially acting as a stable endpoint for dynamic workloads
 
-• Selector-based: Most Services use label selectors to dynamically route traffic to matching Pods.
 
-• Decouples consumers from Pod IPs: Clients don’t need to track changing Pod IPs.
+• Purpose: 
+
+  Exposes a set of Pods under a single DNS name and IP address, enabling reliable communication even as Pods are created or destroyed.
+
+• Selector-based: 
+  
+  Most Services use label selectors to dynamically route traffic to matching Pods.
+
+• Decouples consumers from Pod IPs:
+ 
+ Clients don’t need to track changing Pod IPs.
 
 Types of Services
 -----------------
