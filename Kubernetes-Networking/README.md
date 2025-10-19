@@ -94,6 +94,7 @@ Types of Services
   Maps the Service to an external DNS name (no selector or endpoints).
 
 - Headless:
+  
   Set "clusterIP: None" to expose Pod IPs directly—used for StatefulSets.
 
 
