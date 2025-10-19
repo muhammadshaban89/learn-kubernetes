@@ -1,0 +1,18 @@
+# Containers in same pods communicate through local host.
+# All containers in a Pod share the same network namespace, meaning they have the same IP and can reach each other via localhost.
+# Containers can use any port internally without exposing it to the cluster or outside world
+# They can also share volumes and use inter-process communication (IPC) mechanisms like Unix sockets or shared memory
+
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: c1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Learn-k8S; sleep 5 ; done"]
+    - name: c2
+      image: httpd
+      ports:
+       - containerPort: 80
