@@ -65,14 +65,13 @@ What Is a Kubernetes Service?
 
   In Kubernetes, a Service is an abstraction that defines a logical set of Pods and a policy by which to access them—essentially acting   as a stable endpoint for dynamic workloads
 
-
 • Purpose: 
 
-  Exposes a set of Pods under a single DNS name and IP address, enabling reliable communication even as Pods are created or destroyed.
+ Exposes a set of Pods under a single DNS name and IP address, enabling reliable communication even as Pods are created or destroyed.
 
 • Selector-based: 
   
-  Most Services use label selectors to dynamically route traffic to matching Pods.
+   Most Services use label selectors to dynamically route traffic to matching Pods.
 
 • Decouples consumers from Pod IPs:
  
