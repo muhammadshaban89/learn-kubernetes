@@ -83,11 +83,25 @@ Types of Services
 
 - ClusterIP:
   
-  Default. Accessible only within the cluster. Ideal for internal services
+  *  Default. Accessible only within the cluster. Ideal for internal services
+  *  A ClusterIP is the default type of Kubernetes Service that provides an internal IP address accessible only within the cluster.
+  *  It’s ideal for internal communication between Pods and Services.
+  *  Creates a virtual IP that routes traffic to a set of Pods.
+  *  Accessible only inside the cluster—not exposed externally.
+  *  Used for internal microservice communication, like backend ↔ database.
+
 
 - NodePort:
   
-  Exposes the Service on a static port on each Node’s IP.
+ * Exposes the Service on a static port on each Node’s IP.
+ * A NodePort is a type of Kubernetes Service that exposes your application to external traffic by opening a specific port on every Node in your cluster.
+ * Allocates a port from the range 30000–32767.
+ * Listens on that port on every Node’s IP address.
+ * Routes traffic to the underlying Pods via the Service.
+ 
+  So if your Node IP is 192.168.1.10 and your NodePort is 30080, external clients can access your app at:
+
+        http://192.168.1.10:30080
 
 - LoadBalancer:
   
