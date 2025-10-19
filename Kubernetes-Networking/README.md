@@ -43,6 +43,10 @@ Key Networking Components:
 - Pod-to-Pod:
   
   Handled by the CNI (Container Network Interface) plugin (e.g., Calico, Flannel).
+  
+  containers in different Pods on the same Node can absolutely communicate.
+  
+  In Kubernetes, Pod-to-Pod communication is handled by the cluster network, not by Node locality.
 
 - Pod-to-Service:
   
