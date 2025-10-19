@@ -139,7 +139,7 @@ Types of Services
     * You set clusterIP: None in the Service spec.
     *  Kubernetes skips creating a virtual IP and instead returns A records for each Pod behind the Service.
     *   DNS queries to the Service name resolve to Pod IPs directly, not a single load-balanced IP.
-    *   
+       
    Advantages
 
    * Direct Pod discovery: Useful for StatefulSets, databases (e.g., Cassandra, MongoDB), and custom load balancing.
