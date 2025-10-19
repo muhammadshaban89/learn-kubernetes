@@ -131,7 +131,6 @@ Types of Services
   *	Works well with ConfigMaps and environment variables: You can inject the Service name and keep your app portable.
 
 
-
 - Headless:
   
     * Set "clusterIP: None" to expose Pod IPs directly—used for StatefulSets.
@@ -146,8 +145,6 @@ Types of Services
    * Direct Pod discovery: Useful for StatefulSets, databases (e.g., Cassandra, MongoDB), and custom load balancing.
    * No load balancing: Clients can implement their own logic (e.g., sharding, leader election).
    * Essential for service meshes and sidecar patterns.
-
-
 
 Key Advantages of the Service Object
 ------------------------------------
