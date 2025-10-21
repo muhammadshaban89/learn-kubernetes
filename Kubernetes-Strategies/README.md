@@ -16,10 +16,10 @@ Common Kubernetes Deployment Strategies:
  * Pros:
       Minimal downtime, built-in to Deployment objects.
    
- *Use case:
+ * Use case:
      Standard updates for stateless apps.
      
- *Config:
+ * Config:
      Controlled via "maxUnavailable" and "maxSurge" in the Deployment spec.
 
 2. Recreate
