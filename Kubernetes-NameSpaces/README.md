@@ -3,7 +3,6 @@ NameSpaces in Kubernetes:
 
 * In Kubernetes, a namespace is a way to divide cluster resources between multiple users or teams.
 * It provides isolation, organization, and access control within a single cluster
-
 * A namespace in Kubernetes acts like a virtual cluster inside your physical cluster. 
 * It helps you organize and isolate resources such as Deployments, Services, ConfigMaps, and Secrets.
 * Isolation: Resources in one namespace don’t interfere with those in another.
@@ -47,19 +46,19 @@ Common Namespace Commands:
 
 * List all namespaces
 
-     kubectl get namespaces
+      kubectl get namespaces
 
 * Create a new namespace
  
-    kubectl create namespace dev-lab
+      kubectl create namespace dev-lab
 
 * Use a namespace for a command
    
-     kubectl get pods -n dev-lab
+      kubectl get pods -n dev-lab
 
 * Set default namespace in your context
 
-    kubectl config set-context --current --namespace=dev-lab
+      kubectl config set-context --current --namespace=dev-lab
 
 Example:
  
