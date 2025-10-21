@@ -1,0 +1,30 @@
+#Deletes old pods gradually , one or few at a  time
+#No down time.
+#Idle for critical apps.
+#safe default for production.
+#test it by change image --> kubectl set image deploy/mydeployments webcon=nginx:1.23 --record
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: mydeployments
+spec:
+   replicas: 3
+   strategy:
+     type: RollingUpdate
+     rollingUpdate:
+       maxUnavailable: 1  #Max number (or %) of Pods that can be unavailable during the update -default 1 or 25%
+       maxSurge: 1        #Max number (or %) of extra Pods above desired count during the update -default 
+   selector:     
+    matchLabels:
+      app: nginx-app
+   template:
+     metadata:
+       name: testpod
+       labels:
+         app: nginx-app
+     spec:
+      containers:
+        - name: webcon
+          image: nginx:1.21
+          ports:
+           - containerPort: 80
