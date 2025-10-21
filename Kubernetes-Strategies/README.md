@@ -7,7 +7,7 @@ The most common are Rolling Update, Recreate, Blue-Green, Canary, A/B Testing, a
 Common Kubernetes Deployment Strategies:
 ---------------------------------------
 
-1. Rolling Update (Default)
+1-Rolling Update (Default)
 ---------------------------
 
  * How it works: 
@@ -22,7 +22,7 @@ Common Kubernetes Deployment Strategies:
  * Config:
      Controlled via "maxUnavailable" and "maxSurge" in the Deployment spec.
 
-2. Recreate
+2-Recreate
 -----------
 
 * How it works:
@@ -34,7 +34,7 @@ Common Kubernetes Deployment Strategies:
 * Use case: 
      Apps that can tolerate downtime or require full teardown.
 
-3. Blue-Green Deployment
+3-Blue-Green Deployment
 ------------------------
 
 * How it works:
@@ -46,7 +46,7 @@ Common Kubernetes Deployment Strategies:
 * Use case:
      Critical apps needing safe transitions.
 
-4. Canary Deployment
+4-Canary Deployment
 --------------------
 
 * How it works:
@@ -58,7 +58,7 @@ Common Kubernetes Deployment Strategies:
 * Use case:
      Risk-sensitive updates, feature validation.
 
-5. A/B Testing
+5-A/B Testing
 ---------------
 
 * How it works:
@@ -70,7 +70,7 @@ Common Kubernetes Deployment Strategies:
 * Use case: 
      UX experiments, performance benchmarking.
 
-6. Shadow Deployment
+6-Shadow Deployment
 --------------------
 
 * How it works:
