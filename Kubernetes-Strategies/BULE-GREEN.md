@@ -46,7 +46,7 @@ How to Implement It in Kubernetes
 Example:
 -------
 - Create deployment objects for blue and green depolment using manifes "blue.yml" and "green.yml" (name could be any)
-- create a "service"
+- create a "service" to route trafic
 
 
       kind: Deployment
@@ -109,3 +109,19 @@ Create a service object to route traffic:
         ver: blue    #initialy routes traffic to blue deployment.
       type:  NodePort
 
+ - For testing purpose change "index.html" of both "blue" and "green" deployment objcets.
+ - You can do it by using configMap , but to simplfiy test you can use:
+
+        echo "testing txt" > /usr/local/apache2/htdocs/index.html
+   
+   to each container running in pod.
+   As intially our service object routed trafic to blue , now swicth traffic to "green" deployment using:
+
+       kubectl patch service blueservive  -p '{"spec":{"selector":{"app":"apache","ver":"green"}}}'
+   
+   curl the ip of node with nodeport i.e 30086. You will find the difference here as it will show you green deployment page.
+   
+
+
+ 
+ 
