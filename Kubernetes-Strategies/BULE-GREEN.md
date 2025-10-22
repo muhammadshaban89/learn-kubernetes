@@ -115,7 +115,7 @@ Create a service object to route traffic:
         echo "testing txt" > /usr/local/apache2/htdocs/index.html
    
    to each container running in pod.
-   As intially our service object routed trafic to blue , now swicth traffic to "green" deployment using:
+   As initially our service object routed trafic to blue , now swicth traffic to "green" deployment using:
 
        kubectl patch service blueservive  -p '{"spec":{"selector":{"app":"apache","ver":"green"}}}'
    
