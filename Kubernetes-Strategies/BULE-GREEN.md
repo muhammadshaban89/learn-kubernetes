@@ -41,4 +41,29 @@ How to Implement It in Kubernetes
 - Use labels and selectors smartly to manage traffic routing.
 - Automate with Helm, GitOps, or CI/CD pipelines.
 - Monitor metrics and logs during the switch.
+
+Example:
+-------
+
+    kind: Deployment
+    apiVersion: apps/v1
+    metadata:
+      name: mydeployments
+    spec:
+      replicas: 2
+      selector:     
+        matchLabels:
+        app: apache
+        ver: blue
+    template:
+     metadata:
+       labels:
+         app: apache
+         ver: blue
+     spec:
+      containers:
+        - name: webcon
+          image: apache
+
+
 - Consider using Ingress controllers or Service mesh (e.g., Istio) for more granular traffic control.
