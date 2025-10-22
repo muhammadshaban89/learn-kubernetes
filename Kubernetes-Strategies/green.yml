@@ -4,7 +4,7 @@ metadata:
    name: green-deploy
 spec:
    replicas: 2
-   selector:     
+   selector:
     matchLabels:
       app: apache
       ver: green
@@ -12,8 +12,10 @@ spec:
      metadata:
        labels:
          app: apache
-         ver: blue
+         ver: green
      spec:
       containers:
         - name: webcon
-          image: apache
+          image: httpd
+          ports:
+            - containerPort: 80
