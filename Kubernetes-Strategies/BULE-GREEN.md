@@ -34,6 +34,7 @@ How to Implement It in Kubernetes
 - This reroutes all traffic to the new version instantly.
 - Rollback (if needed)
 - Simply re-point the Service back to blue-deployment.
+- Consider using Ingress controllers or Service mesh (e.g., Istio) for more granular traffic control.
 
  Best Practices:
 ------------------
@@ -44,26 +45,67 @@ How to Implement It in Kubernetes
 
 Example:
 -------
+- Create deployment objects for blue and green depolment using manifes "blue.yml" and "green.yml" (name could be any)
+- create a "service"
 
-    kind: Deployment
-    apiVersion: apps/v1
+
+      kind: Deployment
+      apiVersion: apps/v1
+      metadata:
+        name: blue-deploy
+      spec:
+        replicas: 2
+        selector:     
+          matchLabels:
+          app: apache
+          ver: blue
+      template:
+       metadata:
+         labels:
+           app: apache
+           ver: blue
+      spec:
+        containers:
+          - name: webcon
+            image: apache
+
+  Green deploymenet:
+
+      kind: Deployment
+      apiVersion: apps/v1
+      metadata:
+        name: blue-deploy
+      spec:
+        replicas: 2
+        selector:     
+          matchLabels:
+          app: apache
+          ver: green
+      template:
+       metadata:
+         labels:
+           app: apache
+           ver: blue
+      spec:
+        containers:
+          - name: webcon
+            image: apache
+
+
+Create a service object to route traffic:
+
+
+    kind: Service                            
+    apiVersion: v1
     metadata:
-      name: mydeployments
+      name: blueservive
     spec:
-      replicas: 2
-      selector:     
-        matchLabels:
+      ports:
+       - port: 80                              
+         targetPort: 80  
+         nodePort: 30086                  
+      selector:
         app: apache
-        ver: blue
-    template:
-     metadata:
-       labels:
-         app: apache
-         ver: blue
-     spec:
-      containers:
-        - name: webcon
-          image: apache
+        ver: blue    #initialy routes traffic to blue deployment.
+      type:  NodePort
 
-
-- Consider using Ingress controllers or Service mesh (e.g., Istio) for more granular traffic control.
