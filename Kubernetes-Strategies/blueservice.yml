@@ -1,0 +1,13 @@
+kind: Service                            
+apiVersion: v1
+metadata:
+  name: blueservive
+spec:
+  ports:
+    - port: 80                              
+      targetPort: 80  
+      nodePort: 30086                  
+  selector:
+    app: apache
+    ver: blue
+  type: NodePort
