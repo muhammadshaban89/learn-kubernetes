@@ -4,8 +4,11 @@ Worker-Node Setup -Local Machine
 Prerequisites:
 
 ✅ Control plane already initialized (kubeadm init)
+
 ✅ You have the kubeadm join command with token and hash
+
 ✅ Ubuntu 20.04.2 LTS installed on the worker node
+
 ✅ Root or sudo access
 
 
