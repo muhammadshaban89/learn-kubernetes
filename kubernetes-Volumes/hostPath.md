@@ -20,14 +20,14 @@ Example:
         - image: ubuntu
           name: testc
           command: ["/bin/bash", "-c", "sleep 15000"]
-      volumeMounts:
-        - mountPath: /tmp/hostpath
-          name: testvolume
-    volumes:
-    - name: testvolume
-      hostPath:
-        path: /tmp/data 
-        type: DirectoryOrCreate
+          volumeMounts:
+           - mountPath: /tmp/hostpath
+             name: testvolume
+      volumes:
+       - name: testvolume
+         hostPath:
+            path: /tmp/data 
+            type: DirectoryOrCreate
 
  hostPath.type Option:
  ---------------------
