@@ -18,7 +18,7 @@ Example:
     spec:
       containers:
         - image: ubuntu
-          name: testc
+          name: testcon
           command: ["/bin/bash", "-c", "sleep 15000"]
           volumeMounts:
            - mountPath: /tmp/hostpath
