@@ -156,10 +156,10 @@ This:
        sudo systemctl restart containerd
        sudo systemctl restart kubelet
   
-*3-Final Check
+* 3-Final Check
 On the control plane:
 
-    kubectl get nodes
+      kubectl get nodes
 	
 workernode should no longer appear.
 	
