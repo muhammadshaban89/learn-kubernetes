@@ -41,4 +41,4 @@ Optional: In-Memory Storage
 	emptyDir:
           medium: Memory
 
-his stores the volume in RAM, making it faster but volatile.
+This stores the volume in RAM, making it faster but volatile.
