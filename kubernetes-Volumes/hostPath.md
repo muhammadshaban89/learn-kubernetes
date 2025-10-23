@@ -11,23 +11,23 @@ Example:
 --------
   
 
-apiVersion: v1
-kind: Pod
-metadata:
-  name: hostpath-volume
-spec:
-  containers:
-  - image: ubuntu
-    name: testc
-    command: ["/bin/bash", "-c", "sleep 15000"]
-    volumeMounts:
-    - mountPath: /tmp/hostpath
-      name: testvolume
-  volumes:
-  - name: testvolume
-    hostPath:
-      path: /tmp/data 
-      type: DirectoryOrCreate
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: hostpath-volume
+    spec:
+      containers:
+        - image: ubuntu
+          name: testc
+          command: ["/bin/bash", "-c", "sleep 15000"]
+      volumeMounts:
+        - mountPath: /tmp/hostpath
+          name: testvolume
+    volumes:
+    - name: testvolume
+      hostPath:
+        path: /tmp/data 
+        type: DirectoryOrCreate
 
  hostPath.type Option:
  ---------------------
@@ -46,8 +46,8 @@ spec:
 
    7-BlockDevice:   Must be a block device.
 
-  Cautions:
-------------
+Cautions:
+---------
 
 * Security risk: Containers can access sensitive host files.
 * Node-specific: Ties your pod to a specific node, breaking portability.
