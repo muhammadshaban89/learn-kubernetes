@@ -128,3 +128,65 @@ Troubleshooting Tips:
 
 		sudo systemctl restart containerd
 		sudo systemctl restart kubelet
+
+  
+* How to Remove the Node from the Control Plane?
+  ----------------------------------------------
+
+* Run this on the control plane:
+
+      kubectl drain <node-name> --delete-local-data --force --ignore-daemonsets
+      kubectl delete node <node-name>
+
+For example:
+
+    kubectl drain workernode --delete-local-data --force --ignore-daemonsets
+    kubectl delete node workernode
+	
+This:
+
+- Evicts all pods from workernode  
+- Removes it from the cluster registry
+
+	
+* 2-Reset Kubernetes on the Worker Node- run on worker node.
+
+       sudo kubeadm reset -f
+       sudo rm -rf /etc/kubernetes/ /var/lib/kubelet/* /etc/cni/net.d/ /var/lib/cni/ /run/flannel/
+       sudo systemctl restart containerd
+       sudo systemctl restart kubelet
+  
+*3-Final Check
+On the control plane:
+
+    kubectl get nodes
+	
+workernode should no longer appear.
+	
+How to Clean, Reset and Rejoin if node previosly joined master node?
+-------------------------------------------------------------------------
+
+* 1- Reset Kubernetes on the Worker Node
+
+	  sudo kubeadm reset -f
+* 2- Clean Up Residual Files
+
+		sudo rm -rf /etc/kubernetes/
+		sudo rm -rf /var/lib/kubelet/*
+		sudo rm -rf /etc/cni/net.d/
+		sudo rm -rf /var/lib/cni/
+		sudo rm -rf /run/flannel/
+
+* 3- Restart Services
+
+		sudo systemctl restart containerd
+		sudo systemctl restart kubelet
+* 4- Rejoin the Cluster
+
+  		sudo kubeadm join 192.168.xyz.xyz:6443 --token 1ynh1n.3u5m6cno3adaztax --discovery-token-ca-cert-hash sha256:0360e15628e2685371b8c3e20a7f6a7ab99b44e4ea31f66f54656240e44f68b3
+
+* 5-Final Check
+
+On the control plane: Your workernode should now show Ready.
+
+	kubectl get nodes -o wide
