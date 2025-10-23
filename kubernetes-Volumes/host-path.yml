@@ -8,10 +8,10 @@ spec:
     name: testc
     command: ["/bin/bash", "-c", "sleep 15000"]
     volumeMounts:
-    - mountPath: /tmp/hostpath
+    - mountPath: /tmp/hostpath  #inside container
       name: testvolume
   volumes:
   - name: testvolume
     hostPath:
-      path: /tmp/data 
+      path: /tmp/data #on host machine
       type: DirectoryOrCreate
