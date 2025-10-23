@@ -3,10 +3,13 @@ emptyDir:
 * In Kubernetes, emptyDir is a simple, temporary volume type that’s created when a pod starts and deleted when the pod stops. 
 * It’s ideal for scratch space, caching, or sharing files between containers in the same pod.
 * Lifecycle:
+  
     Created when the pod is assigned to a node; deleted when the pod is removed.
-* Storage Location: 
+* Storage Location:
+  
     By default, stored on the node’s filesystem (), but can be backed by memory ().
 * Use Case:
+  
      Temporary storage for logs, caches, or inter-container communication
 
 Why Use emptyDir?
