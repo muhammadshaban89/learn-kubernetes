@@ -139,3 +139,6 @@ create pod:
 Get pod deetails- (in the output check "NODE" to verify the node where pode is created.)
 		
 		kubecel get pods -o wide   
+Importent Note:
+-------------
+if you are deploying master & worker nodes on local system i.e on you laptop make sure that worker and master nodes host names must be different.
