@@ -7,7 +7,7 @@ emptyDir:
     Created when the pod is assigned to a node; deleted when the pod is removed.
 * Storage Location:
   
-    By default, stored on the node’s filesystem (), but can be backed by memory ().
+    By default, stored on the node’s filesystem (/var/lib/kubelet/), but can be backed by memory (medium:memory).
 * Use Case:
   
      Temporary storage for logs, caches, or inter-container communication
