@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: emptydir-demo
+spec:
+  containers:
+  - name: app
+    image: ubuntu
+    command: ["sh", "-c", "echo Hello > /data/hello.txt && sleep 3600"]
+    volumeMounts:
+    - name: temp-storage
+      mountPath: /data
+  volumes:
+  - name: temp-storage
+    emptyDir: {}
+    # Optional: In-Memory Storage
+    #emptyDir:
+       #medium: Memory
+    #This stores the volume in RAM, making it faster but volatile.
