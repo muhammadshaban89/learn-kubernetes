@@ -120,11 +120,11 @@ Troubleshooting Tips:
 
 - If pods are stuck in ContainerCreating, check:
 
-	journalctl -u kubelet -f
-	ls /etc/cni/net.d/
-	cat /run/flannel/subnet.env
+		journalctl -u kubelet -f
+		ls /etc/cni/net.d/
+		cat /run/flannel/subnet.env
 
 - Restart services if needed:
 
-	sudo systemctl restart containerd
-	sudo systemctl restart kubelet
+		sudo systemctl restart containerd
+		sudo systemctl restart kubelet
