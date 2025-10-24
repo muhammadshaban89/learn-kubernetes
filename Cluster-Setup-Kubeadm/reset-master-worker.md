@@ -9,7 +9,29 @@ If you want to reset and reinitialize the control plane:
     sudo systemctl restart containerd
     sudo systemctl restart kubelet
 
-# Then reinitialize
+* Remove CNI Configuration
+ 
+       sudo rm -rf /etc/cni/net.d/
+       sudo rm -rf /var/lib/cni/
+       sudo rm -rf /run/flannel/
+    
+* Reset iptables Rules (Optional but Recommended)
+  
+      sudo iptables -F
+      sudo iptables -t nat -F
+      sudo iptables -t mangle -F
+      sudo iptables -X
+  
+* Remove kubeconfig Files
+  
+      rm -rf $HOME/.kube/config
+  
+* Restart Services
+
+      sudo systemctl restart containerd
+      sudo systemctl restart kubelet
+
+* Then reinitialize
 
     sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 
