@@ -59,5 +59,3 @@ If you just want to restart the services kubeadm manages:
     sudo systemctl restart kubelet
     sudo systemctl restart containerd
 
-
-Let me know which scenario you're aiming for — I can tailor the exact commands or help you script it for your lab automation.
