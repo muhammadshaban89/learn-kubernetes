@@ -51,4 +51,65 @@ Cautions:
 
 * Security risk: Containers can access sensitive host files.
 * Node-specific: Ties your pod to a specific node, breaking portability.
+
+Hostpath Practical Example: 
+----------------------------
+
+- supose you want to host a sample website  for testing throgh nginx - but you want to test multiple sites one by one.
+- for this you can use hostpth to mount sample-swebsite html from a a host directory to container document root.
+- if you want to access sample-site from outside the cluster you can use "nodePort"
+
+
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: nginx-hostpath-deploy
+      spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: nginx-hostpath
+        template:
+          metadata:
+            labels:
+              app: nginx-hostpath
+        spec:
+          containers:
+            - name: nginx
+              image: nginx:latest
+              ports:
+                - containerPort: 80
+              volumeMounts:
+                - name: site-volume
+                  mountPath: /usr/share/nginx/html
+          volumes:
+            - name: site-volume
+              hostPath:
+                path: /home/ubuntu/sample-site
+                type: DirectoryOrCreate    #better to create on worker node and place html content
+
+Expose the Deployment via NodePort
+
+    apiVersion: v1  
+    kind: Service
+    metadata:
+      name: nginx-hostpath-service
+    spec:
+    type: NodePort
+    selector:
+      app: nginx-hostpath
+    ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30080
+
+Access Your Site
+
+From outside the cluster:
+
+    http://<worker-node-IP>:30080
+
+
+
+
 * Best for: Trusted workloads, debugging, or when you need access to host-level resources.
