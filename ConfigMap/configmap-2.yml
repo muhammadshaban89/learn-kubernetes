@@ -1,0 +1,16 @@
+#Use only key from configMap not entire configMap
+#configMap created using --> kubectl create configmap conf-2 --from-literal=user_name=admin --from-literal=user_group=testing
+apiVersion: v1
+kind: Pod
+metadata:
+  name: conf-2
+spec:
+  containers:
+  - name: demo-container
+    image: nginx
+    env:
+    - name: USER_NAME
+      valueFrom:   
+        configMapKeyRef:   
+          name: conf-2
+          key: user_name
