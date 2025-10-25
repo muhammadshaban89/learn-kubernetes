@@ -16,23 +16,39 @@ This allows your containers to be portable and environment-agnostic, since the c
 How to Create a ConfigMap:
 ------------------------
 
-1. From Literal Values
+1. Imperative
+
+   * From Literal Values
    
-        kubectl create configmap my-config   --from-literal=database_host=172.138.0.1  --from-literal=debug_mode=true
+         kubectl create configmap my-config   --from-literal=database_host=172.138.0.1  --from-literal=debug_mode=true
 
+   *   From a File:
+  
+  	       kubectl create configmap my-config --from-file=config.txt
+ 
 
-2. From a File:
+   * From a Directory
 
-       kubectl create configmap my-config --from-file=config.txt
+          kubectl create configmap my-config --from-file=/path/to/config-dir/
+     
+2.  declaratively
+   
+   To create a ConfigMap declaratively in Kubernetes, you define it in a YAML manifest and apply it using kubectl apply -f.
 
-
-3. From a Directory
-
-        kubectl create configmap my-config --from-file=/path/to/config-dir/
+  	 apiVersion: v1
+	kind: ConfigMap
+	metadata:
+	  name: app-config
+	  namespace: default
+	data:
+ 	 APP_ENV: production
+ 	 LOG_LEVEL: debug
+ 	 MAX_CONNECTIONS: "100"
 
 
 
 📥 How to Use a ConfigMap
+
 🔹 As Environment Variables
 
     envFrom:
