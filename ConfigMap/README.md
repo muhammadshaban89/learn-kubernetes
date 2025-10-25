@@ -68,6 +68,41 @@ How to Create a ConfigMap:
     
       args: ["--host=$(DATABASE_HOST)"]
 
+	  
+🔹 configMapKeyRef:    used in Kubernetes to inject specific keys from a ConfigMap into a pod’s environment variables — rather than loading the entire ConfigMap.
+
+   Assume you have this ConfigMap:
+
+    apiVersion: v1
+	kind: ConfigMap
+	metadata:
+	  name: app-config
+	data:
+	  APP_ENV: production
+ 	 LOG_LEVEL: debug
+	 
+Now inject just LOG_LEVEL into a pod:
+
+ 	apiVersion: v1
+	kind: Pod
+	metadata:
+	  name: configmap-keyref-demo
+	spec:
+	  containers:
+    - name: demo-container
+      image: busybox
+      command: ["sh", "-c", "env && sleep 3600"]
+      env:
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: LOG_LEVEL
+
+- Only the LOG_LEVEL key from app-config is injected as an environment variable.
+- The pod will have LOG_LEVEL=debug in its environment.
+
+
 View and Manage:
 ----------------
 
