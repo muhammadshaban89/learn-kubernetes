@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-hostpath-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-hostpath
+  template:
+    metadata:
+      labels:
+        app: nginx-hostpath
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: site-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: site-volume
+          hostPath:
+            path: /home/ubuntu/sample-site
+            type: DirectoryOrCreate 
