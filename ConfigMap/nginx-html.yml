@@ -1,0 +1,11 @@
+#use --> kubectl apply -f nginx-html.yml  to create configMap.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-html
+data:
+  index.html: |
+    <html>
+      <head><title>Custom NGINX Page</title></head>
+      <body><h1>Hello from ConfigMap!</h1></body>
+    </html>
