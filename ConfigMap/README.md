@@ -35,7 +35,7 @@ How to Create a ConfigMap:
    
    To create a ConfigMap declaratively in Kubernetes, you define it in a YAML manifest and apply it using kubectl apply -f.
 
-  	 apiVersion: v1
+  	apiVersion: v1
 	kind: ConfigMap
 	metadata:
 	  name: app-config
