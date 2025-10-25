@@ -69,6 +69,7 @@ How to Create a ConfigMap:
       args: ["--host=$(DATABASE_HOST)"]
 
 View and Manage:
+----------------
 
 - List all ConfigMaps:
 
