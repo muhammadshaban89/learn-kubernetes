@@ -1,6 +1,6 @@
 #mount/inject config map as volume 
 #configMap "nginx-html" created using declarative method.
-#see "nginx-html.yml" manifes.
+#see "nginx-html.yml" manifest.
 apiVersion: v1
 kind: Pod
 metadata:
