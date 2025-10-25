@@ -1,3 +1,4 @@
+#in this example configMap is used for custem index.html page.
 #mount/inject config map as volume 
 #configMap "nginx-html" created using declarative method.
 #see "nginx-html.yml" manifest.
