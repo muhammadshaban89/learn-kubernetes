@@ -1,0 +1,13 @@
+#using entire configMap in a pod.
+#configMap can be created using imparitvely or declaratively. 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: conf-1
+spec:
+  containers:
+  - name: demo-container
+    image: nginx
+    envFrom:
+    - configMapRef:
+       name: conf-1
