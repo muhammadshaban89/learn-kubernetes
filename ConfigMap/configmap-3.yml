@@ -1,0 +1,22 @@
+#mount/inject config map as volume 
+#configMap "nginx-html" created using declarative method.
+#see "nginx-html.yml" manifes.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: html-volume
+          mountPath: /usr/share/nginx/html
+  volumes:
+    - name: html-volume
+      configMap:
+        name: nginx-html
