@@ -6,6 +6,7 @@ HostPath:
 * It allows a pod to access files or directories on the node where it’s running.
 * Useful for accessing system-level resources like logs, Docker sockets, or custom binaries.
 * Not portable across nodes unless all nodes have the same directory structure.
+* Best for: Trusted workloads, debugging, or when you need access to host-level resources.
 
 Example:
 --------
@@ -55,9 +56,9 @@ Cautions:
 Hostpath Practical Example: 
 ----------------------------
 
-- supose you want to host a sample website  for testing throgh nginx - but you want to test multiple sites one by one.
-- for this you can use hostpth to mount sample-swebsite html from a a host directory to container document root.
-- if you want to access sample-site from outside the cluster you can use "nodePort"
+- supose you want to host a sample website  for testing  - but you want to test multiple sites one by one.
+- for this you can use hostpth to mount sample-swebsite html from  a host directory ,directly into pod i.e to container DocumentRoot.
+- if you want to access sample-site from outside the cluster you can use service-> "nodePort"
 
 
       apiVersion: apps/v1
@@ -112,4 +113,3 @@ From outside the cluster:
 
 
 
-* Best for: Trusted workloads, debugging, or when you need access to host-level resources.
