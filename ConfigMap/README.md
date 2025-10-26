@@ -69,7 +69,9 @@ How to Create a ConfigMap:
       args: ["--host=$(DATABASE_HOST)"]
 
 	  
-🔹 configMapKeyRef:    used in Kubernetes to inject specific keys from a ConfigMap into a pod’s environment variables — rather than loading the entire ConfigMap.
+🔹 AS configMapKeyRef:  
+
+used in Kubernetes to inject specific keys from a ConfigMap into a pod’s environment variables — rather than loading the entire ConfigMap.
 
    Assume you have this ConfigMap:
 
