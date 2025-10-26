@@ -57,7 +57,7 @@ Hostpath Practical Example:
 ----------------------------
 
 - supose you want to host a sample website  for testing  - but you want to test multiple sites one by one.
-- for this you can use hostpth to mount sample-swebsite html from  a host directory ,directly into pod i.e to container DocumentRoot.
+- for this you can use hostpth to mount sample websites  html from  a host directory ,directly into pod i.e to container DocumentRoot.
 - if you want to access sample-site from outside the cluster you can use service-> "nodePort"
 
 
