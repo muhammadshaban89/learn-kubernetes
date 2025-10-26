@@ -1,6 +1,6 @@
 #using entire configMap in a pod.
 #configMap can be created using imparitvely or declaratively. 
-#kubectl create confimap conf-1 --from-literal=user=admin
+#kubectl create configmap conf-1 --from-literal=user=admin
 #after creating configmap and injecting to a conatainer in a pod u can check by running
 #kubectl exec -it <podname> -- printenv
 apiVersion: v1
