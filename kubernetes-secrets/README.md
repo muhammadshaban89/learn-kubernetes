@@ -80,7 +80,7 @@ Top Use Cases for Kubernetes Secrets
   - Store DB_USERNAME and DB_PASSWORD as Secrets.  
   - Inject into Pods via environment variables or mounted volumes.
   - Keeps credentials out of container images and Pod specs.
-  - 
+ 
 2-API Keys and Tokens
 
   - Store third-party service tokens (e.g., Stripe, Twilio, GitHub, Slack).
