@@ -10,7 +10,9 @@
 A liveness probe helps detect situations where a container is "alive" but stuck or unresponsive. For example:
 
 • Deadlocks
+
 • Infinite loops
+
 • Hung processes
 
 If the liveness check fails repeatedly, Kubernetes kills and restarts the container to restore service availability.
