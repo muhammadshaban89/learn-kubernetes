@@ -52,8 +52,12 @@ Example:
           timeoutSeconds: 30 
 
 - initialDelaySeconds: Wait time before starting probes.
-- periodSeconds: Frequency of checks.
+- periodSeconds: Frequency of checks.The time (in seconds) between consecutive probe executions.
+
 - failureThreshold: Number of failures before restart.
+- timeoutSeconds: The number of seconds after which the probe times out if no response is received.
+                  Prevents the probe from hanging indefinitely.
+                  If the container doesn't respond within this time, the probe is considered failed
 
 ✅ Best Practices:
 -------------------
