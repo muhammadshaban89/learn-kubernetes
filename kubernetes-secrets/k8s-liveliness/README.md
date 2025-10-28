@@ -47,9 +47,14 @@ Example:
               command:                                         
               - cat                
               - /tmp/healthy
-          initialDelaySeconds: 5          
-          periodSeconds: 5                                 
-          timeoutSeconds: 30 
+          initialDelaySeconds: 5       #Wait time before starting probes.     
+          periodSeconds: 5             #Frequency of checks.
+          timeoutSeconds: 30           #The number of seconds after which the probe times out if no response is received.
+                                         #If the container doesn't respond within this time, the probe is considered failed.
+
+  how to test this :
+  
+  * apply the manifes  , go inside container , run cat /tmp/health-check , run echo $? , if output is zero it measn its ok, if it returns no zero value it means file dose not exists so probe will fail and it will restart container.                                  
 
 - initialDelaySeconds:
 
