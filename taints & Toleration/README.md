@@ -47,9 +47,9 @@ This pod can now be scheduled on nodes tainted with `dedicated=frontend:NoSchedu
 
 ⚙️ Taint Effects Explained
 
-* NoSchedule:      Pod won’t be scheduled unless it has a matching toleration               
-* PreferNoSchedule: Scheduler avoids the node unless no better options are available     
-* NoExecute: Existing pods without toleration are evicted; new ones won’t be scheduled|\
+* NoSchedule:      Pod won’t be scheduled unless it has a matching toleration.              
+* PreferNoSchedule: Scheduler avoids the node unless no better options are available.     
+* NoExecute: Existing pods without toleration are evicted; new ones won’t be scheduled.
 
 
 **Removing a Taint**
