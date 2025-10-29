@@ -32,15 +32,18 @@ A **toleration** is applied to a pod. It allows the pod to be scheduled on nodes
 Example:
 
     apiVersion: v1
-    kind: Pod
-    metadata:
-      name: mypod
-    spec:
-    tolerations:
-    - key: "dedicated"
-      operator: "Equal"
-      value: "frontend"
-      effect: "NoSchedule"
+	kind: Pod
+	metadata:
+ 	 name: mypod
+	spec:
+ 	  containers:
+ 		 - name: mycontainer
+  			  image: nginx
+	  tolerations:
+		- key: key1
+ 		  operator: Equal
+  		  value: value1
+ 		   effect: NoSchedule
 
 
 This pod can now be scheduled on nodes tainted with `dedicated=frontend:NoSchedule`.
