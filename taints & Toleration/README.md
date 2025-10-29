@@ -1,7 +1,8 @@
 Taints and tolerations in Kubernetes:
 ----------------------------------------
-
-Taints and tolerations in Kubernetes control which pods can be scheduled on which nodes, allowing fine-grained placement and isolation of workloads.
+* Kubernetes scheduler  assign newly created pods to the most appropriate nodes in the cluster based on resource availability, constraints, and policies.
+* but if you want to assign pod to specific node taints and tolerations are used.
+* Taints and tolerations in Kubernetes control which pods can be scheduled on which nodes,  allowing fine-grained placement and isolation of workloads.
 
 
 What Are Taints?
