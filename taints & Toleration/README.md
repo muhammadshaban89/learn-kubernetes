@@ -22,6 +22,9 @@ Example:
 
 This means: *“Don’t schedule any pod on `node1` unless it tolerates the `dedicated=frontend` taint.”*
 
+To check node is taineted or nor not:
+
+	kubectl describe node <node-name> | grep Taint
 
 
 What Are Tolerations?
