@@ -118,4 +118,15 @@ Let’s say you have GPU nodes:
 
 This ensures only GPU-tolerant pods land on GPU nodes — even if other pods have matching nodeSelectors.
 
+Importent:
+---------
+
+**what if node is not taineted but toleration applied to pod?**
+
+* If a node is not tainted, but a pod has tolerations, the tolerations simply have no effect — and that’s perfectly fine.
+* Tolerations only matter when a node has taints.
+* If there are no taints, the scheduler ignores the tolerations and proceeds with normal scheduling.
+* 
+
+
 
