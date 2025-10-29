@@ -1,8 +1,7 @@
 Taints and tolerations in Kubernetes:
 ----------------------------------------
 
-
-Taints and tolerations in Kubernetes control which pods can be scheduled on which nodes, allowing fine-grained placement and isolation of workloads.**
+Taints and tolerations in Kubernetes control which pods can be scheduled on which nodes, allowing fine-grained placement and isolation of workloads.
 
 
 What Are Taints?
