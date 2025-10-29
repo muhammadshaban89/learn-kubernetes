@@ -126,7 +126,5 @@ Importent:
 * If a node is not tainted, but a pod has tolerations, the tolerations simply have no effect — and that’s perfectly fine.
 * Tolerations only matter when a node has taints.
 * If there are no taints, the scheduler ignores the tolerations and proceeds with normal scheduling.
-* 
-
-
+  
 
