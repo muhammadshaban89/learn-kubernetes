@@ -51,13 +51,13 @@ This pod can now be scheduled on nodes tainted with `dedicated=frontend:NoSchedu
 * NoExecute: Existing pods without toleration are evicted; new ones won’t be scheduled|\
 
 
-Removing a Taint
+**Removing a Taint**
 
 To remove a taint:
 
 	kubectl taint nodes node1 dedicated=frontend:NoSchedule-
  
-🧠 Use Cases
+🧠 **Use Cases**
 
 - **Dedicated nodes**: Reserve nodes for specific workloads (e.g., GPU, logging).
 - **Isolation**: Prevent critical workloads from being scheduled on general-purpose nodes.
