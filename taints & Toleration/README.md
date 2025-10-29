@@ -16,17 +16,28 @@ A **taint** is applied to a node to repel pods that don’t explicitly tolerate 
   
 - **Effect**:   Determines the behavior (`NoSchedule`, `PreferNoSchedule`, or `NoExecute`)
 
-Example:
+**Example:**
 
 	kubectl taint nodes node1 dedicated=frontend:NoSchedule
 
 This means: *“Don’t schedule any pod on `node1` unless it tolerates the `dedicated=frontend` taint.”*
 
-To check node is taineted or nor not:
+**To check node is taineted or nor not:**
 
 	kubectl describe node <node-name> | grep Taint
 
+**You can taint a node with multiple keys:**
 
+	kubectl taint nodes node1 env=prod:NoSchedule
+	kubectl taint nodes node1 gpu=true:NoExecute
+	kubectl taint nodes node1 zone=us-west:PreferNoSchedule
+	
+**How It Works**
+
+- A pod must tolerate all taints on a node to be scheduled there.
+- If a pod tolerates only one or two of the taints, it will still be repelled by the others.
+- You can define multiple tolerations in the pod spec to match multiple taints.
+  
 What Are Tolerations?
 ---------------------
 
