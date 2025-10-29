@@ -63,3 +63,42 @@ To remove a taint:
 - **Dedicated nodes**: Reserve nodes for specific workloads (e.g., GPU, logging).
 - **Isolation**: Prevent critical workloads from being scheduled on general-purpose nodes.
 - **Eviction control**: Use `NoExecute` to evict pods from nodes under maintenance or failure.
+
+why taints and toleration if nodeselectors also available?
+----------------------------------------------------------
+
+Taints and tolerations are used to repel pods from nodes unless explicitly tolerated, while nodeSelectors are used to attract pods to specific nodes. They serve different purposes and offer different levels of control
+
+🧠 **When to Use Each**
+
+✅ Use NodeSelectors or Node Affinity when:
+
+- You want to attract pods to specific nodes (e.g., zone=us-west)
+- You’re guiding placement based on hardware, region, or labels
+- You don’t need to enforce strict exclusion
+  
+✅ Use Taints and Tolerations when:
+
+- You want to repel all pods from a node unless they explicitly tolerate it
+- You need to reserve nodes for critical workloads
+- You want to evict pods from a node under certain conditions (e.g., maintenance, failure)
+
+**Real-World Example:**
+
+Let’s say you have GPU nodes:
+
+- Taint the GPU nodes:
+  
+ 		kubectl taint nodes gpu-node gpu=true:NoSchedule
+  
+- Only allow GPU workloads:
+
+		tolerations:
+		- key: "gpu"
+ 	      operator: "Equal"
+          value: "true"
+          effect: "NoSchedule"
+
+This ensures only GPU-tolerant pods land on GPU nodes — even if other pods have matching nodeSelectors.
+
+
