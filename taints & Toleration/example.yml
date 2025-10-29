@@ -1,0 +1,19 @@
+
+#taint node using: kubectl taint nodes node-name dedicated=frontend:NoSchedule ,
+#then create pod and apply toleration
+#apply yaml manifest.
+#Check pod deployment at node
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mycontainer
+    image: nginx
+tolerations:
+- key: dedicated   #is the key which is used to taint the node
+  operator: Equal
+  value: frontend   #value of key 
+  effect: NoSchedule
