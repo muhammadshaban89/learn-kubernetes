@@ -39,8 +39,25 @@ To join your Ubuntu 20.04.2 LTS node as a Kubernetes worker, you'll need to inst
       sudo apt update
       sudo apt install -y kubelet kubeadm kubectl
       sudo apt-mark hold kubelet kubeadm kubectl
-    
-🔐 Step 4: Join the Cluster
+
+ 🔐 Step 4: 
+    *  1. Enable br_netfilter modul
+     
+         sudo modprobe br_netfilter
+         echo 'br_netfilter' | sudo tee /etc/modules-load.d/k8s.conf
+         
+   * 2. Set required sysctl parameters
+
+            sudo tee /etc/sysctl.d/k8s.conf <<EOF
+            net.bridge.bridge-nf-call-iptables = 1
+            net.ipv4.ip_forward = 1
+            EOF
+        
+   apply changes:
+   
+             sudo sysctl --system
+     
+🔐 Step 5: Join the Cluster
 - On the master node, run:
  
       kubeadm token create --print-join-command
