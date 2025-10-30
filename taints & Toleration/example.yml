@@ -12,8 +12,8 @@ spec:
   containers:
   - name: mycontainer
     image: nginx
-tolerations:
-- key: dedicated   #is the key which is used to taint the node
-  operator: Equal
-  value: frontend   #value of key 
-  effect: NoSchedule
+  tolerations:
+  - key: dedicated   #is the key which is used to taint the node
+    operator: Equal
+    value: frontend   #value of key 
+    effect: NoSchedule   #u can use any effect as per requirement NoSchedule , NoPreferSchedule or NoExecute
