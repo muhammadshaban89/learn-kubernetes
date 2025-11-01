@@ -97,3 +97,7 @@ These restrict the number of Kubernetes objects in a namespace:
       - scopeName: PriorityClass
         operator: In
         values: ["high-priority"]
+        
+Remember!!!!!!
+----------------
+When you apply a ResourceQuota, it limits usage within a namespace, but the actual resource consumption happens on worker nodes where the Pods are scheduled.
