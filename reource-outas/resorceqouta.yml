@@ -1,4 +1,5 @@
-#Note that resourceqouta scope is nsame-space. sot these are limits for name-space.
+#Note that resourceqouta scope is name-space. so these are limits for entire name-space. 
+#For containers inside pod, limits are define in ymal manifest i.e pod ,deploy etc
 apiVersion: v1
 kind: ResourceQuota
 metadata:
