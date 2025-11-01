@@ -7,9 +7,9 @@ metadata:
   namespace: dev-team
 spec:
   hard:
-    pods: "5"
+    pods: "4"
     requests.cpu: "2"
-    requests.memory: "4Gi"
+    requests.memory: "2Gi"
     limits.cpu: "4"
-    limits.memory: "8Gi"
+    limits.memory: "3Gi"
     
