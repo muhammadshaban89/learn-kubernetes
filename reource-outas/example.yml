@@ -20,9 +20,9 @@ spec:
       - name: nginx
         image: nginx
         resources:
-          requests:
-            cpu: "500m"
+          requests:     #how much container ask for
+            cpu: "500m"  
             memory: "512Mi"
           limits:
-            cpu: "1"
+            cpu: "1"   #how musch containers allowed to use at most
             memory: "1Gi"
