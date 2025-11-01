@@ -12,10 +12,10 @@ It ensures that workloads don’t consume excessive resources or run without def
 ------------
 
 **- Default injection:**
-If a Pod doesn’t specify resources.requests or resources.limits, Kubernetes injects defaults from the LimitRange.
+If a Pod doesn’t specify "resources.requests "or "resources.limits", Kubernetes injects defaults from the LimitRange.
 
 **- Validation failure:**
-If a Pod violates the min or max constraints, it will be rejected with a LimitRange validation error.
+If a Pod violates the "min" or "max" constraints, it will be rejected with a LimitRange validation error.
 
 **- Scope:**
 Only new Pods are validated. Existing ones are not retroactively affected.
