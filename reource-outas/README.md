@@ -71,23 +71,22 @@ These control total CPU and memory usage across all Pods in a namespace:
 
 These manage persistent and ephemeral storage:
 
-- requests.storage: Total requested storage across PVCs
-- persistentvolumeclaims: Max number of PVCs
-- requests.ephemeral-storage: Total ephemeral storage requested
-- limits.ephemeral-storage: Total ephemeral storage limit
+- **requests.storage:** Total requested storage across PVCs
+- **persistentvolumeclaims:** Max number of PVCs
+- **requests.ephemeral-storage:** Total ephemeral storage requested
+- **limits.ephemeral-storage:** Total ephemeral storage limit
 
 **Object Count Limits**
-
 These restrict the number of Kubernetes objects in a namespace:
 
-- pods: Max number of Pods
-- services: Max number of Services
-- replicationcontrollers
-- secrets
-- configmaps
+- **pods:** Max number of Pods
+- **services:** Max number of Services
+- **replicationcontrollers**
+- **secrets**
+- **configmaps**
 - resourcequotas
-- services.loadbalancers: Max number of LoadBalancer-type Services
-- services.nodeports: Max number of NodePort-type Services
+- **services.loadbalancers:** Max number of LoadBalancer-type Services
+- **services.nodeports:** Max number of NodePort-type Services
 
 **Compute Resource Limits by Pod Priority Class**
 
