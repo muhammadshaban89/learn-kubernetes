@@ -97,6 +97,29 @@ These restrict the number of Kubernetes objects in a namespace:
       - scopeName: PriorityClass
         operator: In
         values: ["high-priority"]
+
+**Verify Resource Quota Creation:**
+
+To verify that the Resource Quota has been successfully created, run the following command:
+
+	kubectl get resourcequota compute-resources
+ 
+**View Existing Resource Quotas**
+
+To view the existing Resource Quotas in the "my-first-ns"  namespace, use the following command:
+
+	kubectl get resourcequota -n my-first-ns
+
+**Delete a Resource Quota**
+To delete a Resource Quota from the "my-first-ns" namespace, execute the following command:
+
+  	kubectl delete resourcequota compute-resources -n my-first-ns
+
+**Checking Resource Utilization**
+To check the resource utilization of the "my-first-ns" namespace, run the following command:
+
+	kubectl top namespace my-first-ns
+        
         
 Remember!!!!!!
 ----------------
