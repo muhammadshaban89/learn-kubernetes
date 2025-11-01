@@ -1,0 +1,14 @@
+#Note that resourceqouta scope is nsame-space. sot these are limits for name-space.
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota
+  namespace: dev-team
+spec:
+  hard:
+    pods: "5"
+    requests.cpu: "2"
+    requests.memory: "4Gi"
+    limits.cpu: "4"
+    limits.memory: "8Gi"
+    
