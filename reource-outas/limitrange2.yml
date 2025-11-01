@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-demo3
+spec:
+  containers:
+    - name:cont3
+      image: nginx
+      resources:
+        requests:
+          cpu: "0.75"
