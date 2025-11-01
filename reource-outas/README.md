@@ -3,18 +3,22 @@ ResourceQuota in Kubernetes:
 
 In Kubernetes, a ResourceQuota is a policy object that limits the total amount of resources (like CPU, memory, storage, and object counts) that a namespace can consume.
 
-** Purpose of ResourceQuota**
+**Purpose of ResourceQuota**
 
-• Prevent resource hogging: Ensures no single team or workload monopolizes cluster resources.
-• Enable fair sharing: Especially important in multi-tenant environments.
-• Control costs and capacity: Helps with budgeting and planning in cloud-native setups.
+- Prevent resource hogging: Ensures no single team or workload monopolizes cluster resources.
+
+- Enable fair sharing: Especially important in multi-tenant environments.
+
+- Control costs and capacity: Helps with budgeting and planning in cloud-native setups.
 
 **What You Can Limit**
 
 ResourceQuota can restrict:
 
 - Compute resources: requests.cpu, limits.cpu, requests.memory, limits.memory
+  
 - Storage: PersistentVolumeClaims (PVCs), ephemeral storage
+  
 - Object counts: Number of Pods, Services, Secrets, ConfigMaps, etc.
 
 **Example YAML**
