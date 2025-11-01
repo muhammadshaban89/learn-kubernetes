@@ -11,7 +11,7 @@ In Kubernetes, a ResourceQuota is a policy object that limits the total amount o
 
 - Control costs and capacity: Helps with budgeting and planning in cloud-native setups.
 
-**What You Can Limit**
+**What You Can Limit?**
 
 ResourceQuota can restrict:
 
@@ -40,7 +40,7 @@ ResourceQuota can restrict:
 
 This sets a cap on total CPU/memory requests and limits, plus object counts like Pods and PVCs in the dev namespace.
 
-**How It Works**
+**How It Works?**
 
 - Quotas are enforced per namespace.
 - Kubernetes checks the total usage before allowing new resource creation.
