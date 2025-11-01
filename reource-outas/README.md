@@ -1,5 +1,5 @@
 ResourceQuota in Kubernetes:
-
+----------------------------
 
 In Kubernetes, a ResourceQuota is a policy object that limits the total amount of resources (like CPU, memory, storage, and object counts) that a namespace can consume.
 
