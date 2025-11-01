@@ -52,3 +52,49 @@ This sets a cap on total CPU/memory requests and limits, plus object counts like
 - Combine with LimitRange to enforce per-Pod or per-container limits.
 - Use RBAC to isolate teams into namespaces.
 - Monitor usage with tools like kubectl describe quota or Prometheus/Grafana.
+
+Kubernetes ResourceQuota options:
+----------------------------------
+
+* Kubernetes ResourceQuota supports a wide range of options to control resource usage per namespace, including compute, storage, and object counts.
+
+**Compute Resource Limits**
+
+These control total CPU and memory usage across all Pods in a namespace:
+
+- **requests.cpu**: Total CPU requested by all containers
+- **limits.cpu**: Total CPU limit across all containers
+- **requests.memory**: Total memory requested
+- **limits.memory**: Total memory limit
+
+**Storage Resource Limits**
+
+These manage persistent and ephemeral storage:
+
+- requests.storage: Total requested storage across PVCs
+- persistentvolumeclaims: Max number of PVCs
+- requests.ephemeral-storage: Total ephemeral storage requested
+- limits.ephemeral-storage: Total ephemeral storage limit
+
+**Object Count Limits**
+
+These restrict the number of Kubernetes objects in a namespace:
+
+- pods: Max number of Pods
+- services: Max number of Services
+- replicationcontrollers
+- secrets
+- configmaps
+- resourcequotas
+- services.loadbalancers: Max number of LoadBalancer-type Services
+- services.nodeports: Max number of NodePort-type Services
+
+**Compute Resource Limits by Pod Priority Class**
+
+ scope quotas by priority class
+
+    scopeSelector:
+      matchExpressions:
+      - scopeName: PriorityClass
+        operator: In
+        values: ["high-priority"]
