@@ -12,9 +12,9 @@ spec:
     min:
       cpu: "100m"
       memory: "128Mi"
-    default:
+    default:                      #Sets the default resource limit if none is specified in the Pod spec
       cpu: "500m"
       memory: "512Mi"
-    defaultRequest:
+    defaultRequest:              #Sets the default resource request if none is specified in the Pod spec
       cpu: "200m"
       memory: "256Mi"
