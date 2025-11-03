@@ -5,6 +5,7 @@ What Is Static Provisioning in kubernetes?
 Static provisioning in Kubernetes refers to the **manual creation and binding of PersistentVolumes (PVs)** by a cluster administrator, rather than letting Kubernetes dynamically provision storage based on a StorageClass.
 
 **static provisioning**
+
 In static provisioning:
 
 - Pre-create a **PersistentVolume (PV)** that points to a specific storage resource (e.g., NFS share, local disk, iSCSI target).
