@@ -32,5 +32,5 @@ spec:
       resources:
         requests:
           storage: 2Gi                     #K8s will create pv (volumename-statefuleset-name) -then pvc to claim this storage if there is default storage class exist or if 
-                                           #matching PV (volumename-statefuleset-name)is craeted manually or already exsist.
+                                           #matching PV (volumename-statefuleset-name) is created manually or already exsist.
                                            #if no default storage class is available or PV not exsist , PVC will remain pending
