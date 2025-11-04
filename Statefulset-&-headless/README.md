@@ -21,13 +21,13 @@ What Is a StatefulSet?
 
 StatefulSets are ideal for:
 
-  • 	Databases (e.g., MySQL, PostgreSQL)
+   • 	Databases (e.g., MySQL, PostgreSQL)
 
-  • 	Distributed systems (e.g., Kafka, Zookeeper)
+   • 	Distributed systems (e.g., Kafka, Zookeeper)
 
-  • 	Messaging queues (e.g., RabbitMQ)
+   • 	Messaging queues (e.g., RabbitMQ)
 
-  • 	Any app needing persistent data and stable identity
+   • 	Any app needing persistent data and stable identity
 
  **Example YAML**
 ```
