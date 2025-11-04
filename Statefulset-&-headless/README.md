@@ -68,6 +68,8 @@ spec:
 
   • 	Requires a headless service for stable DNS.
 
+  • 	Requires storageclass for provisioning. 
+
   • 	PVCs are not deleted when the StatefulSet is deleted.
 
   • 	Rolling updates are ordered and can be slower than Deployments.
@@ -120,3 +122,17 @@ When paired with a StatefulSet named web, the headless service enables DNS entri
 * A headless service gives each Pod a stable DNS name  but it does not expose the service externally.
 * It’s mainly used for internal communication between Pods.
 * To expose it externally, you need to add a NodePort, LoadBalancer, or Ingress on top of it.
+
+Importent:
+---------
+
+* if you want that all pods in statefulset use different storage ,use "volumeCalimTemplete"
+* kuberenetes will create pv:
+  
+           <volume-claim-name>-<statefulset-name>-<ordinal>
+  
+* Kubernetes then tries to bind the PVC to a matching PersistentVolume (PV). if no maching PV is found, it will remain pending.
+* If no StorageClass is present in your Kubernetes cluster, then PersistentVolumeClaims (PVCs) cannot be dynamically fulfilled — they will remain in  state until you manually create matching PersistentVolumes (PVs).
+* Each Pod gets its own PVC → PVC requests storage → StorageClass provisions or binds → Pod mounts the volume.
+  
+
