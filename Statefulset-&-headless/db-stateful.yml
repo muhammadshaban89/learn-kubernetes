@@ -24,11 +24,13 @@ spec:
         volumeMounts:
         - name: postgres-storage
           mountPath: /var/lib/postgresql/data
-  volumeClaimTemplates:
+  volumeClaimTemplates:                   #This is define so that each pod has its own storage , if not define , all pod will use same storage
   - metadata:
-      name: postgres-storage
+      name: postgres-storage   
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 2Gi
+          storage: 2Gi                     #K8s will create pv -then pvc to claim this storage if there is default storage class exist or if 
+                                           #matching PV is craeted manually or already exsist.
+                                           #if no default storage class is available or PV not exsist , PVC will remain pending
