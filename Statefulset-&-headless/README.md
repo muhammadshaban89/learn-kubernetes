@@ -84,9 +84,9 @@ spec:
  
    • Pod Discovery: Enables clients to discover individual pod IPs via DNS.
 
-  • Stable DNS: Each pod gets a DNS entry.
+   • Stable DNS: Each pod gets a DNS entry.
 
-  • Direct Access: Useful for apps like databases or distributed systems that need to talk to specific pod instances.
+   • Direct Access: Useful for apps like databases or distributed systems that need to talk to specific pod instances.
 
 🧪 Example YAML
 
