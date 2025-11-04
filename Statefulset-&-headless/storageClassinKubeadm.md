@@ -20,6 +20,8 @@ How to Set Up a Default StorageClass in Kubeadm?
 **You have two options:**
 
 🔹 Option 1: Use a Local Provisioner (for bare-metal)
+---------------------------------------------------------
+
 
 Install a dynamic provisioner like [`local-path-provisioner`](https://github.com/rancher/local-path-provisioner) or use a static `hostPath` setup.
 
