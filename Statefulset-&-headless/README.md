@@ -135,5 +135,10 @@ Importent:
 * If no StorageClass is present in your Kubernetes cluster, then PersistentVolumeClaims (PVCs) cannot be dynamically fulfilled — they will remain in  state until you manually create matching PersistentVolumes (PVs).
 * Each Pod gets its own PVC → PVC requests storage → StorageClass provisions or binds → Pod mounts the volume.
 * Kubeadm does not install a default StorageClass by itself. You must manually create one or install a dynamic provisioner.
+* to Set Up a Default StorageClass in Kubeadm ,Use a Local Provisioner (for bare-metal OR Use Static Provisioning with hostPath.
+* Provisioning with hostPath,does not support dynamic provisioning, so you must manually create matching PVs.
+  
+
+
   
 
