@@ -21,7 +21,7 @@ spec:
         volumeMounts:
         - name: nginx-storage
           mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
+  volumeClaimTemplates:   #its define so that each pod has diffrenet storage
   - metadata:
       name: nginx-storage
     spec:
