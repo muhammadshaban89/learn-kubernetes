@@ -9,25 +9,25 @@ What Is a StatefulSet?
 
 🔑 **Key Features**
 
-• 	Stable Network Identity: Each pod gets a predictable DNS name (, , etc.) via a headless service.
+  • 	Stable Network Identity: Each pod gets a predictable DNS name (, , etc.) via a headless service.
 
-• 	Persistent Storage: Each pod can have its own PersistentVolumeClaim (PVC) that survives pod restarts.
+  • 	Persistent Storage: Each pod can have its own PersistentVolumeClaim (PVC) that survives pod restarts.
 
-• 	Ordered Deployment & Scaling: Pods are created, updated, and deleted in a defined sequence.
+  • 	Ordered Deployment & Scaling: Pods are created, updated, and deleted in a defined sequence.
 
-• 	Pod Identity: Pods are not interchangeable; web-0 is distinct from web-1 .
+  • 	Pod Identity: Pods are not interchangeable; web-0 is distinct from web-1 .
 
 **Typical Use Cases**
 
 StatefulSets are ideal for:
 
-• 	Databases (e.g., MySQL, PostgreSQL)
+  • 	Databases (e.g., MySQL, PostgreSQL)
 
-• 	Distributed systems (e.g., Kafka, Zookeeper)
+  • 	Distributed systems (e.g., Kafka, Zookeeper)
 
-• 	Messaging queues (e.g., RabbitMQ)
+  • 	Messaging queues (e.g., RabbitMQ)
 
-• 	Any app needing persistent data and stable identity
+  • 	Any app needing persistent data and stable identity
 
  **Example YAML**
 ```
@@ -66,11 +66,11 @@ spec:
 
 ⚠️ **Limitations**
 
-• 	Requires a headless service for stable DNS.
+  • 	Requires a headless service for stable DNS.
 
-• 	PVCs are not deleted when the StatefulSet is deleted.
+  • 	PVCs are not deleted when the StatefulSet is deleted.
 
-• 	Rolling updates are ordered and can be slower than Deployments.
+  • 	Rolling updates are ordered and can be slower than Deployments.
 
 -----------------------------------------------------------------------------
 
@@ -82,11 +82,11 @@ spec:
 
  **Why Use a Headless Service?**
  
- • Pod Discovery: Enables clients to discover individual pod IPs via DNS.
+   • Pod Discovery: Enables clients to discover individual pod IPs via DNS.
 
-• Stable DNS: Each pod gets a DNS entry.
+  • Stable DNS: Each pod gets a DNS entry.
 
-• Direct Access: Useful for apps like databases or distributed systems that need to talk to specific pod instances.
+  • Direct Access: Useful for apps like databases or distributed systems that need to talk to specific pod instances.
 
 🧪 Example YAML
 
@@ -117,6 +117,6 @@ When paired with a StatefulSet named web, the headless service enables DNS entri
 **Note That**    
 -----------
 
-* A headless service () gives each Pod a stable DNS name (e.g., ) but it does not expose the service externally.
+* A headless service gives each Pod a stable DNS name  but it does not expose the service externally.
 * It’s mainly used for internal communication between Pods.
 * To expose it externally, you need to add a NodePort, LoadBalancer, or Ingress on top of it.
