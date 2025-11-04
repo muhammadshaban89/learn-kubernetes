@@ -10,16 +10,23 @@ What Is a StatefulSet?
 🔑 **Key Features**
 
 • 	Stable Network Identity: Each pod gets a predictable DNS name (, , etc.) via a headless service.
+
 • 	Persistent Storage: Each pod can have its own PersistentVolumeClaim (PVC) that survives pod restarts.
+
 • 	Ordered Deployment & Scaling: Pods are created, updated, and deleted in a defined sequence.
+
 • 	Pod Identity: Pods are not interchangeable; web-0 is distinct from web-1 .
 
 **Typical Use Cases**
 
 StatefulSets are ideal for:
+
 • 	Databases (e.g., MySQL, PostgreSQL)
+
 • 	Distributed systems (e.g., Kafka, Zookeeper)
+
 • 	Messaging queues (e.g., RabbitMQ)
+
 • 	Any app needing persistent data and stable identity
 
  **Example YAML**
@@ -58,8 +65,11 @@ spec:
 ```
 
 ⚠️ **Limitations**
+
 • 	Requires a headless service for stable DNS.
+
 • 	PVCs are not deleted when the StatefulSet is deleted.
+
 • 	Rolling updates are ordered and can be slower than Deployments.
 
 -----------------------------------------------------------------------------
@@ -72,8 +82,10 @@ spec:
 
  **Why Use a Headless Service?**
  
-• Pod Discovery: Enables clients to discover individual pod IPs via DNS.
+ • Pod Discovery: Enables clients to discover individual pod IPs via DNS.
+
 • Stable DNS: Each pod gets a DNS entry.
+
 • Direct Access: Useful for apps like databases or distributed systems that need to talk to specific pod instances.
 
 🧪 Example YAML
@@ -96,8 +108,8 @@ spec:
 
 ```
 
-With this setup, DNS will return A records for each pod rather than a single IP for the service
-When paired with a StatefulSet named web, the headless service enables DNS entries like:
+**With this setup, DNS will return A records for each pod rather than a single IP for the service
+When paired with a StatefulSet named web, the headless service enables DNS entries like:**
 
     web-0.my-service.default.svc.cluster.local
     web-1.my-service.default.svc.cluster.local
