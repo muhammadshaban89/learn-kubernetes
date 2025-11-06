@@ -7,7 +7,7 @@ Installing and Configuring AWS EBS CSI Driver for Kubernetes Cluster with Dynami
 * A Kubernetes version of 1.20 or greater.
 * An AWS account with access to create an IAM user and obtain an access key and secret key.
 * Create a role "ebs-csi-driver" with "AmazonEBSCSIDriverPolicy".
-* After createing EC-Instance apply security role "ebs-csi-driver" to each instance.
+* After creating EC-Instance apply security role "ebs-csi-driver" to each instance.
 
 
 **Installing Helm**
