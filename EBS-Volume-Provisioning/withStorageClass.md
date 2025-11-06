@@ -21,10 +21,7 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scrip
 
 Create a secret to store your AWS access key and secret key using the following command:
 ```
-kubectl create secret generic aws-secret \
-    --namespace kube-system \
-    --from-literal "key_id=${AWS_ACCESS_KEY_ID}" \
-    --from-literal "access_key=${AWS_SECRET_ACCESS_KEY}"
+kubectl create secret generic aws-secret  --namespace kube-system  --from-literal "key_id=${AWS_ACCESS_KEY_ID}"  --from-literal "access_key=${AWS_SECRET_ACCESS_KEY}"
 ```
 **Add the AWS EBS CSI Driver Helm chart repository:**
 
@@ -34,9 +31,7 @@ helm repo update
 ```
 **Deploy the AWS EBS CSI Driver using the following command:**
 ```
-helm upgrade --install aws-ebs-csi-driver \
-    --namespace kube-system \
-    aws-ebs-csi-driver/aws-ebs-csi-driver
+helm upgrade --install aws-ebs-csi-driver  --namespace kube-system  aws-ebs-csi-driver/aws-ebs-csi-driver
 ```
 
 **Verify that the driver has been deployed and the pods are running:**
