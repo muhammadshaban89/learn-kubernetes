@@ -57,12 +57,12 @@ PVCs without `storageClassName` will use this default.
 
 ---
 
-Types of storageClass:
+**Types of storageClass:**
 ------------------------
 
-**Kubernetes supports multiple types of StorageClasses, each tailored to different storage backends and use cases. 
+* Kubernetes supports multiple types of StorageClasses, each tailored to different storage backends and use cases.
 
-These classes define how PersistentVolumes (PVs) are dynamically provisioned when a PersistentVolumeClaim (PVC) is created.**
+* These classes define how PersistentVolumes (PVs) are dynamically provisioned when a PersistentVolumeClaim (PVC) is created.
 
 ---
 
