@@ -153,7 +153,7 @@ volumeBindingMode: Immediate
 
 ---
 
-## ✅ Best Practices
+##  Best Practices
 
 - Use `WaitForFirstConsumer` for multi-zone clusters to delay provisioning until Pod scheduling
 - Set `storageclass.kubernetes.io/is-default-class: "true"` for your preferred default
@@ -167,7 +167,7 @@ volumeBindingMode: Immediate
 
 ---
 
-## 🔗 `volumeBindingMode`
+##  `volumeBindingMode`
 
 This controls **when** a PersistentVolume (PV) is bound to a PersistentVolumeClaim (PVC).
 
