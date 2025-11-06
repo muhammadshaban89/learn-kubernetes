@@ -31,7 +31,7 @@ volumeBindingMode: WaitForFirstConsumer
 
 ---
 
-## 📄 Example PVC Using Dynamic Provisioning
+## Example PVC Using Dynamic Provisioning
 
 ```yaml
 apiVersion: v1
@@ -51,7 +51,7 @@ When this PVC is applied, Kubernetes dynamically provisions a PV using the `loca
 
 ---
 
-## 🔍 Benefits
+## Benefits
 
 - **Automation**: No manual PV creation
 - **Scalability**: Ideal for CI/CD and cloud-native apps
