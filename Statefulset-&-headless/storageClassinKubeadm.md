@@ -39,7 +39,8 @@ volumeBindingMode: WaitForFirstConsumer
 ```
 
 > This works well for Minikube, K3s, or bare-metal clusters.
-> thit StorageClass definition will work with kubeadm, but only if you’ve installed the Local Path Provisioner that supports rancher.io/local-path.
+
+> This  StorageClass definition will work with kubeadm, but only if you’ve installed the Local Path Provisioner that supports rancher.io/local-path.
 
 
 # 🔹 Option 2: Use Static Provisioning with `hostPath`
