@@ -78,8 +78,17 @@ and run:
 ```
 kubectl exec busybox-client -- wget -O- 10.244.27.138
 ```
+**Note that**
 
-  
+  • 	Without the allow policy: connection fails
+  • 	With the allow policy: connection succeeds
 
+**How to List All NetworkPolicies**
+```
+kubectl get networkpolicy -A
+```
+**Describe a network Policy**
+```
+kubectl describe networkpolicy <policy-name> -n <namespace>
 
-
+```
