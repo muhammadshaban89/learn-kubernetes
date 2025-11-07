@@ -5,7 +5,7 @@ Sidecar,Adapter,Ambassador:
 * In Kubernetes, **Sidecar**, **Adapter**, and **Ambassador** are design patterns used to extend or enhance the behavior of applications without modifying their core logic. 
 * These patterns are especially useful in microservices architectures. 
 
-##1. Sidecar Pattern
+## 1. Sidecar Pattern
 -------------------
 
 A **Sidecar** is a helper container that runs alongside the main container in the same Pod. It shares the same network namespace and can augment the main container's functionality.
