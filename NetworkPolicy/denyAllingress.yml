@@ -1,0 +1,14 @@
+# 	 → Targets all Pods in the namespace.
+# 	 → Applies only to incoming traffic.
+# 	 → No  rules → Means deny all ingress by default
+
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-all-ingress
+  namespace: default
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
