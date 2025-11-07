@@ -2,7 +2,7 @@
 
 **This is perfect for testing Calico enforcement and Pod-level isolation.**
 
-### 🧪 Pod Setup
+### Pod Setup
 
 #### 1️ `nginx-server` (Target Pod)
 
