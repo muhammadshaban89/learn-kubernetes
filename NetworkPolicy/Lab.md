@@ -39,8 +39,8 @@ kubectl exec busybox-client -- wget -O- 10.244.27.138
 ***Then create "Denny all Policy" and check connectivity.**
 
 ```
-#• 	 → Targets all Pods in the namespace.
-#• 	 → Applies only to incoming traffic.
+#• 	 podSelector: {}→ Targets all Pods in the namespace.
+#• 	 policyTypes:→ Applies only to incoming traffic.
 #• 	No  rules → Means deny all ingress by default.
 
 apiVersion: networking.k8s.io/v1
