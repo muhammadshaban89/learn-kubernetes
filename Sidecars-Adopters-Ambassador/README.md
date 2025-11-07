@@ -1,5 +1,5 @@
-Sidecar,Adapter,Ambassador:
---------------------------
+Multi-Container-Pods --> Sidecar,Adapter,Ambassador:
+----------------------------------------------------
 
 
 * In Kubernetes, **Sidecar**, **Adapter**, and **Ambassador** are design patterns used to extend or enhance the behavior of applications without modifying their core logic. 
