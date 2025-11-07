@@ -1,5 +1,5 @@
 
-## What Is a Kubernetes Network Policy?
+## What is a Kubernetes Network Policy?
 ---------------------------------------
 
 * Kubernetes Network Policies let you control Pod-to-Pod and Pod-to-external traffic using label selectors and rules for ingress and egress. They're enforced by your CNI plugin (e.g., Calico, Cilium) and are essential for securing microservices.**
