@@ -35,7 +35,8 @@ Check pod-pod connectivity using:
 ```
 kubectl exec busybox-client -- wget -O- 10.244.27.138
 ```
-**Then create "Denny all Policy" and check connectivity.
+
+***Then create "Denny all Policy" and check connectivity.**
 
 ```
 #• 	 → Targets all Pods in the namespace.
