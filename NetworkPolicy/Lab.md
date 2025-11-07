@@ -5,17 +5,18 @@ Deny all ingress:
 1:Create two pods --**nginx-server** and **busybox-client**
 ```
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
   name: nginx-server
   namespace: default
-spec:
-  selector:
+  labels:
     app: nginx
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.25
+    ports:
+    - containerPort: 80
 
 ```
 **busybox-client**
