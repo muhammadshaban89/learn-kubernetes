@@ -100,7 +100,7 @@ In Kubernetes **Network Policies**, **ingress** and **egress** define the direct
 
 ---
 
-##Ingress Example: Allow traffic from specific Pods
+## Ingress Example: Allow traffic from specific Pods
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -128,7 +128,7 @@ spec:
 
 ---
 
-## gress Example: Allow DNS and HTTPS traffic
+## egress Example: Allow DNS and HTTPS traffic
 
 ```yaml
 apiVersion: networking.k8s.io/v1
