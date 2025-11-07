@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: c1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Learn-k8S; sleep 5 ; done"]
+    - name: c2
+      image: ubuntu
+      ports:
+       - containerPort: 80
