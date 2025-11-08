@@ -28,8 +28,9 @@ How  Works as an Adapter:
 -------------------------
 
  **Input: StatsD Metrics**
-  • 	The main container emits metrics in StatsD format (UDP packets).
-  • 	These are lightweight, fast, and common in legacy apps or microservices.
+ 
+   • 	The main container emits metrics in StatsD format (UDP packets).
+   • 	These are lightweight, fast, and common in legacy apps or microservices.
   
   **Adapter Role**
   
