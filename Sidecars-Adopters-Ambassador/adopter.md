@@ -57,6 +57,9 @@ How  Works as an Adapter:
   Then open other terminal:
   
     curl http://localhost:9102/metrics
+To check iput of only first container:
+
+    kubectl logs adapter-pod -c main-app --tail=20
 
 
 
