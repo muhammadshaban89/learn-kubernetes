@@ -43,11 +43,25 @@ How  Works as an Adapter:
   - The adapter exposes transformed metrics on HTTP port 9102 at /metrics.
   - Prometheus scrapes this endpoint to ingest metrics in its native format.
 
-** Why This Is an Adapter?**
+**Why This Is an Adapter?**
 
   - It adapts one protocol (StatsD) into another (Prometheus).
   - It does not interfere with the main app logic.
   - It adds observability without modifying the main container.
+
+**How to Deploy?**
+
+    kubectl apply -f adapter-pod.yaml
+    kubectl port-forward pod/adapter-pod 9102
+    
+  Then open other terminal:
+  
+    curl http://localhost:9102/metrics
+
+
+
+
+
 
 
         
