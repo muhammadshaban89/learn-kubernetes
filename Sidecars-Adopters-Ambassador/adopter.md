@@ -7,34 +7,22 @@ kind: Pod
 metadata:
   name: adapter-pod
   labels:
-    app: metrics-demo
+    app: statsd-adapter
   annotations:
     prometheus.io/scrape: "true"
-    prometheus.io/port: "9090"
+    prometheus.io/port: "9102"
 spec:
   containers:
     - name: main-app
-      image: muhammaddev/myapp:latest
+      image: busybox
+      command: ["sh", "-c", "while true; do echo 'sending metrics'; sleep 10; done"]
+    - name: statsd-adapter
+      image: prom/statsd-exporter:latest
       ports:
-        - containerPort: 8080
-      env:
-        - name: METRICS_ENABLED
-          value: "true"
-    - name: metrics-adapter
-      image: muhammaddev/metrics-adapter:latest
-      env:
-        - name: TARGET_PORT
-          value: "8080"
-        - name: FORMAT
-          value: "prometheus"
-      ports:
-        - containerPort: 9090
-      readinessProbe:
-        httpGet:
-          path: /metrics
-          port: 9090
-        initialDelaySeconds: 5
-        periodSeconds: 10
+        - containerPort: 9102
+      args:
+        - "--statsd.listen-udp=:8125"
+        - "--web.listen-address=:9102"
 ```
 How  Works as an Adapter:
 -------------------------
