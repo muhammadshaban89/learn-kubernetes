@@ -38,7 +38,6 @@ spec:
 - **ambassador**: Uses `socat` to listen on port `8080` and forward traffic to `main-app` on `5678`.
 - Clients send requests to `8080`, and the ambassador transparently proxies them to the main container.
 
--
 ### How to Test?
 
 1. Deploy the pod:
