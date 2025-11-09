@@ -88,9 +88,9 @@ spec:
 Cooling Period in HPA:
 ------------------------
   
-  _ **Kubernetes Horizontal Pod Autoscaler (HPA) includes a *cooldown period* to prevent rapid, repeated scaling actions.**
+  _ Kubernetes Horizontal Pod Autoscaler (HPA) includes a *cooldown period* to prevent rapid, repeated scaling actions.
 
-  _  **This is managed through stabilization windows and scaling policies.**
+  _  This is managed through stabilization windows and scaling policies.
 
 ### What Is the Cooling Period in HPA?
 
