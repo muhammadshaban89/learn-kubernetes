@@ -56,8 +56,27 @@ spec:
 
    #if not install, install it using:
    
-   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yam
+   
    ```
+  **OR**
+  
+  ```bash
+    #Download the YAML Locally
+    curl -LO https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  # Edit the Deployment
+
+  args:
+  - --cert-dir=/tmp
+  - --secure-port=10250
+  - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+  - --kubelet-use-node-status-port
+  - --metric-resolution=15s
+  - --kubelet-insecure-tls
+
+#save and apply
+
+    kubectl apply -f components.yaml
 
 3. **Deploy HPA**:
    ```bash
