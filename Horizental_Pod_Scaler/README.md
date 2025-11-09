@@ -47,6 +47,9 @@ spec:
 
 1. **Install Metrics Server** (if not already installed):
    
+   * The Metrics Server in Kubernetes collects and aggregates resource usage data—like CPU and memory—from nodes and pods, enabling features like kubectl top and autoscaling.
+
+   
    ```bash
    #check first:
    kubectl get deployment metrics-server -n kube-system
