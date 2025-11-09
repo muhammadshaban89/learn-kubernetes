@@ -46,16 +46,22 @@ spec:
 ###  Setup Steps:
 
 1. **Install Metrics Server** (if not already installed):
+   
    ```bash
+   #check first:
+   kubectl get deployment metrics-server -n kube-system
+
+   #if not install, install it using:
+   
    kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
    ```
 
-2. **Deploy HPA**:
+3. **Deploy HPA**:
    ```bash
    kubectl apply -f hpa.yaml
    ```
 
-3. **Monitor HPA**:
+4. **Monitor HPA**:
    ```bash
    kubectl get hpa
    ```
