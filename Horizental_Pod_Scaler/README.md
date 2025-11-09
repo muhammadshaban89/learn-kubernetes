@@ -45,7 +45,7 @@ spec:
 
 ###  Setup Steps:
 
-1. **Install Metrics Server** (if not already installed):
+**Install Metrics Server** (if not already installed):
    
    * The Metrics Server in Kubernetes collects and aggregates resource usage data—like CPU and memory—from nodes and pods, enabling features like kubectl top and autoscaling.
 
@@ -73,22 +73,20 @@ spec:
   - --kubelet-use-node-status-port
   - --metric-resolution=15s
   - --kubelet-insecure-tls
-
+```
 #save and apply
-
+```bash
     kubectl apply -f components.yaml
+```
 
-3. **Deploy HPA**:
+ **Deploy HPA**:
    ```bash
    kubectl apply -f hpa.yaml
    ```
-
-4. **Monitor HPA**:
+**Monitor HPA**:
    ```bash
    kubectl get hpa
    ```
-
----
 
 ### Use Cases
 
