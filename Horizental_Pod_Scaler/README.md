@@ -85,12 +85,12 @@ spec:
 - **Multiple Metrics**: HPA v2 supports combining CPU, memory, and custom metrics.
 - **Thrashing Prevention**: Configure stabilization windows to avoid frequent scaling.
 
-  Cooling Period in HPA:
-  -----------------------
+Cooling Period in HPA:
+------------------------
   
-  **Kubernetes Horizontal Pod Autoscaler (HPA) includes a *cooldown period* to prevent rapid, repeated scaling actions.**
+  _ **Kubernetes Horizontal Pod Autoscaler (HPA) includes a *cooldown period* to prevent rapid, repeated scaling actions.**
 
-  **This is managed through stabilization windows and scaling policies.**
+  _  **This is managed through stabilization windows and scaling policies.**
 
 ### What Is the Cooling Period in HPA?
 
