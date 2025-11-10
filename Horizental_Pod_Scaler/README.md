@@ -50,15 +50,30 @@ spec:
    * The Metrics Server in Kubernetes collects and aggregates resource usage data—like CPU and memory—from nodes and pods, enabling features like kubectl top and autoscaling.
 
    
-   ```bash
-   #check first:
-   kubectl get deployment metrics-server -n kube-system
 
+   #check first:
+   ```bash
+     kubectl get deployment metrics-server -n kube-system
+ ```
    #if not install, install it using:
-   
-   kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+   ```bash
+     kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+  ```
+   edit the yaml file:
+
+   ```bash
+   kubectl edit deployment metrics-server -n kube-system
+```
+#and add line below args and save file.
+```bahs
+       - --kubelet-insecure-tls
    
    ```
+#then -> Check, matrics server must be running.
+```bash
+
+    kubectl get pods -n kube-system
+```
   **OR**
   
   ```bash
