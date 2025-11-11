@@ -14,7 +14,8 @@
 • Run once per Pod: They don’t restart unless the Pod itself restarts.
 • Separate from app containers: You can use different images, tools, and permissions.
 
-**Key Features*
+**Key Features**
+----------------
 
 • Runs to completion: Unlike regular containers, init containers must finish before the Pod proceeds.
 • Multiple init containers: You can define several, and they run in order.
@@ -31,7 +32,7 @@
 
 📄 Example: Init Container That Prepares a Volume:
 
-yaml
+
 ```bash
 apiVersion: v1
 kind: Pod
@@ -63,7 +64,7 @@ spec:
 **Key Components Explained**
 
 🔹 **initContainers:**
-yaml
+
 ```bash
 - name: init-volume
   image: alpine
@@ -76,7 +77,7 @@ yaml
 - Mounts a shared volume at /tmp/xchange
 
 🔹 **containers**
-yaml
+
 ```bash
 - name: main-app
   image: alpine
@@ -88,7 +89,7 @@ yaml
 - Mounts the same shared volume at /tmp/data
 
 🔹 **volumes**
-yaml
+
 ```
 - name: shared-data
   emptyDir: {}
