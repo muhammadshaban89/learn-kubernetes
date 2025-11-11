@@ -31,8 +31,11 @@
 ----------------------
 
 •  Setting up permissions on mounted volumes
+
 •  Waiting for a database or service to be ready
+
 •  Injecting secrets or config files
+
 •  Validating IAM roles or CSI driver readiness.
 
 📄 Example: Init Container That Prepares a Volume:
