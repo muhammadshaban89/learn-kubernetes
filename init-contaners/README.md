@@ -39,6 +39,7 @@
 •  Validating IAM roles or CSI driver readiness.
 
 📄 Example: Init Container That Prepares a Volume:
+--------------------------------------------------
 
 
 ```bash
