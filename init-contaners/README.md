@@ -11,7 +11,9 @@
 ---------------------------------------
 
 •  Run sequentially: Each init container must complete before the next one starts.
+
 •  Run once per Pod: They don’t restart unless the Pod itself restarts.
+
 •  Separate from app containers: You can use different images, tools, and permissions.
 
 **Key Features**
