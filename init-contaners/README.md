@@ -20,8 +20,11 @@
 ----------------
 
 • Runs to completion: Unlike regular containers, init containers must finish before the Pod proceeds.
+
 • Multiple init containers: You can define several, and they run in order.
+
 • Separate image and tools: You can use different images and tools than your main app container.
+
 • Used for setup: Common tasks include waiting for a database, setting permissions, or pulling config files
 
 **Common Use Cases:**
@@ -105,7 +108,5 @@ spec:
 ----------
 
 - Use init containers to validate IAM role attachment before CSI provisioning.
-- - Script dummy file creation or health checks before PVC binding.
-- Patch metrics-server or HPA setups with pre-flight checks.
 - Script dummy file creation or health checks before PVC binding.
 - Patch metrics-server or HPA setups with pre-flight checks.
