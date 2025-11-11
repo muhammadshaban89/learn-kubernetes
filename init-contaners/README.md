@@ -19,13 +19,13 @@
 **Key Features**
 ----------------
 
-• Runs to completion: Unlike regular containers, init containers must finish before the Pod proceeds.
+ • Runs to completion: Unlike regular containers, init containers must finish before the Pod proceeds.
 
-• Multiple init containers: You can define several, and they run in order.
+ • Multiple init containers: You can define several, and they run in order.
 
-• Separate image and tools: You can use different images and tools than your main app container.
+ • Separate image and tools: You can use different images and tools than your main app container.
 
-• Used for setup: Common tasks include waiting for a database, setting permissions, or pulling config files
+ • Used for setup: Common tasks include waiting for a database, setting permissions, or pulling config files
 
 **Common Use Cases:**
 ----------------------
