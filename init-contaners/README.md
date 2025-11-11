@@ -10,9 +10,9 @@
  What Makes Init Containers Special?
 ---------------------------------------
 
-• Run sequentially: Each init container must complete before the next one starts.
-• Run once per Pod: They don’t restart unless the Pod itself restarts.
-• Separate from app containers: You can use different images, tools, and permissions.
+•  Run sequentially: Each init container must complete before the next one starts.
+•  Run once per Pod: They don’t restart unless the Pod itself restarts.
+•  Separate from app containers: You can use different images, tools, and permissions.
 
 **Key Features**
 ----------------
@@ -25,10 +25,10 @@
 **Common Use Cases:**
 ----------------------
 
-• Setting up permissions on mounted volumes
-• Waiting for a database or service to be ready
-• Injecting secrets or config files
-• Validating IAM roles or CSI driver readiness.
+•  Setting up permissions on mounted volumes
+•  Waiting for a database or service to be ready
+•  Injecting secrets or config files
+•  Validating IAM roles or CSI driver readiness.
 
 📄 Example: Init Container That Prepares a Volume:
 
