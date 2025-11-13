@@ -39,30 +39,27 @@ Topics Covered:
 
 **15-secrets**
 
-**16-Liveliness**
 
-**17-kuberners-taints&Tolerance**
+**16-kuberners-taints&Tolerance**
 
-**18-reource-qouta**
+**17-reource-qouta**
 
-**19-Static_Provisioning**
+**18-Static_Provisioning**
 
-**20-Dynamic_Provisioning**
+**19-Dynamic_Provisioning**
 
-**21-StorageClass**
+**20-EBS_Volume -Provisioning**
 
-**22-EBS_Volume -Provisioning**
+**21-statefulset-Headless**
 
-**23-statefulset-Headless**
+**22-Network-Policy**
 
-**24-Network-Policy**
+**23-Multi-container_pods/sidcars,adoptos,ambassadors**
 
-**25-Multi-container_pods/sidcars,adoptos,ambassadors**
+**24-**Horizental_Pod_Autoscaler**
 
-**26-**Horizental_Pod_Autoscaler**
+**25-init_containers**
 
-**27-init_containers**
-
-**28-Role_Based_Access_Control**
+**26-Role_Based_Access_Control**
 
 
