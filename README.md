@@ -7,7 +7,7 @@ www.linkedin.com/in/muhammad-shaban-45577719a
 
 Topics Covered:
 --------------
-**1-Minkube_Instalation_Guide**
+**1-Minkube_Installation_Guide**
 
 **2-Setup_Multi_Node_Cluster**
 
