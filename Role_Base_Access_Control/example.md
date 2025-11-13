@@ -1,7 +1,9 @@
 
 
-**Example-To test RBAC for user authentication in Kubernetes, you need to combine certificate-based user creation with RoleBindings. **
-----------------------------------------------------------------------------------------------------------------------------------------
+Example---
+
+To test RBAC for user authentication in Kubernetes, you need to combine certificate-based user creation with RoleBindings
+----------------------------------------------------------------------------------------------------------------------------------
 
 ### Step-by-Step: RBAC for User Authentication
 
