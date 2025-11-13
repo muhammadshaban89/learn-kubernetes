@@ -17,54 +17,54 @@ Topics Covered:
 **4-Kubernetes_Commands**
 
 
-**8-K8s-Pods**
+**5-K8s-Pods**
 
-**9-Labels,NodeSelectors,annotations**
+**6-Labels,NodeSelectors,annotations**
 
-**10-Envirnomental_varaiables**
+**7-Envirnomental_varaiables**
 
-**11-RepliceControllers & Replicasets**
+**8-RepliceControllers & Replicasets**
 
-**12-Deployment_Objects**
+**9-Deployment_Objects**
 
-**13-Kubernetes_Networking**
+**10-Kubernetes_Networking**
 
-**14-K8S-Namespaces**
+**11-K8S-Namespaces**
 
-**15-Strategies**
+**12-Strategies**
 
-**16-Blue-Green_Deployment**
+**13-Blue-Green_Deployment**
 
-**17-K8s-Volumes**
+**14-K8s-Volumes**
 
-**18-configMap**
+**15-configMap**
 
-**19-secrets**
+**16-secrets**
 
-**20-Liveliness**
+**17-Liveliness**
 
-**21-kuberners-taints&Tolerance**
+**18-kuberners-taints&Tolerance**
 
-**22-reource-qouta**
+**19-reource-qouta**
 
-**23-Static_Provisioning**
+**20-Static_Provisioning**
 
-**24-Dynamic_Provisioning**
+**21-Dynamic_Provisioning**
 
-**25-StorageClass**
+**22-StorageClass**
 
-**26-EBS_Volume -Provisioning**
+**23-EBS_Volume -Provisioning**
 
-**27-statefulset-Headless**
+**24-statefulset-Headless**
 
-**28-Network-Policy**
+**25-Network-Policy**
 
-**29-Multi-container_pods/sidcars,adoptos,ambassadors**
+**26-Multi-container_pods/sidcars,adoptos,ambassadors**
 
-**30-**Horizental_Pod_Autoscaler**
+**27-**Horizental_Pod_Autoscaler**
 
-**31-init_containers**
+**28-init_containers**
 
-**32-Role_Based_Access_Control**
+**29-Role_Based_Access_Control**
 
 
