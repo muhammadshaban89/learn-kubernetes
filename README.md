@@ -9,17 +9,13 @@ Topics Covered:
 --------------
 **1-Minkube_Installation_Guide**
 
-**2-Setup_Multi_Node_Cluster**
+**2-MultiNode-Cluster-Kubeadm**
 
-**3-How_to_setup_worker_node**
 
-**4-Start_minikube_with_driver=none**
+**3-Start_minikube_with_driver=none**
 
-**5-Kubernetes_Commands**
+**4-Kubernetes_Commands**
 
-**6-Setup_MultiNode_Cluster_ubuntu-20.04.2**
-
-**7-Setup_master&Worker_Node_AWS**
 
 **8-K8s-Pods**
 
