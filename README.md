@@ -33,38 +33,36 @@ Topics Covered:
 
 **12-Strategies**
 
-**13-Blue-Green_Deployment**
+**13-K8s-Volumes**
 
-**14-K8s-Volumes**
+**14-configMap**
 
-**15-configMap**
+**15-secrets**
 
-**16-secrets**
+**16-Liveliness**
 
-**17-Liveliness**
+**17-kuberners-taints&Tolerance**
 
-**18-kuberners-taints&Tolerance**
+**18-reource-qouta**
 
-**19-reource-qouta**
+**19-Static_Provisioning**
 
-**20-Static_Provisioning**
+**20-Dynamic_Provisioning**
 
-**21-Dynamic_Provisioning**
+**21-StorageClass**
 
-**22-StorageClass**
+**22-EBS_Volume -Provisioning**
 
-**23-EBS_Volume -Provisioning**
+**23-statefulset-Headless**
 
-**24-statefulset-Headless**
+**24-Network-Policy**
 
-**25-Network-Policy**
+**25-Multi-container_pods/sidcars,adoptos,ambassadors**
 
-**26-Multi-container_pods/sidcars,adoptos,ambassadors**
+**26-**Horizental_Pod_Autoscaler**
 
-**27-**Horizental_Pod_Autoscaler**
+**27-init_containers**
 
-**28-init_containers**
-
-**29-Role_Based_Access_Control**
+**28-Role_Based_Access_Control**
 
 
