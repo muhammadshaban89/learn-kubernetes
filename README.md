@@ -25,7 +25,7 @@ Topics Covered:
 
 **9-Labels,NodeSelectors,annotations**
 
-**10-Envirnoment_varaiables**
+**10-Envirnomental_varaiables**
 
 **11-RepliceControllers & Replicasets**
 
@@ -43,28 +43,32 @@ Topics Covered:
 
 **18-configMap**
 
-**19-Liveliness**
+**19-secrets**
 
-**20-kuberners-taints&Tolerance**
+**20-Liveliness**
 
-**21-reource-qouta**
+**21-kuberners-taints&Tolerance**
 
-**22-Static_Provisioning**
+**22-reource-qouta**
 
-**23-Dynamic_Provisioning**
+**23-Static_Provisioning**
 
-**24-StorageClass**
+**24-Dynamic_Provisioning**
 
-**25-statefulset**
+**25-StorageClass**
 
-**26-Network-Policy**
+**26-EBS_Volume -Provisioning**
 
-**27-Multi-container_pods/sidcars,adoptos,ambassadors**
+**27-statefulset-Headless**
 
-**28-**Horizental_Pod_Autoscaler**
+**28-Network-Policy**
 
-**29-init_containers**
+**29-Multi-container_pods/sidcars,adoptos,ambassadors**
 
-**30-Role_Based_Access_Control**
-**
+**30-**Horizental_Pod_Autoscaler**
+
+**31-init_containers**
+
+**32-Role_Based_Access_Control**
+
 
