@@ -103,5 +103,25 @@ spec:
    curl -sSk -H "Authorization: Bearer $TOKEN" https://kubernetes.default.svc/api/v1/namespaces/default/secrets
    ```
 
+Note:
+----
+
+**please check seperate  yaml manifests for role,serviceaccont, roleBinding and pod examples**
+
+**deployment Order**
+```
+kubectl apply -f serviceaccount.yaml
+kubectl apply -f role.yaml
+kubectl apply -f rolebinding.yaml
+kubectl apply -f pod.yaml
+```
+OR:
+
+```
+kubectl apply -f ./manifests/
+```
+
+
+
    ❌ You should get a `403 Forbidden` — because the Role doesn't allow access to secrets.
 
