@@ -123,5 +123,29 @@ OR:
 kubectl apply -f ./manifests/
 ```
 
+**Importent**
+--------------
+
+* when a pod i created , default serviceaccount automatically associated with pod.
+* You can check by :
+```
+kubectl decribe pod pod-name | grep -i default
+```
+and a token is mounted to mount ,which you can check by:
+```
+kubectl decribe pod pod-name | grep -i serviceaccount
+```
+which shows:
+```
+/var/run/secrets/kubernetes.io/serviceaccount
+```
+If you want that pod not use this defalt service account- in specs mention:
+
+```yaml
+specs:
+  automountServiceAccountToken: false
+```
+after this even when you describe the pod, despite showing "serviceaccout=defult" k8s will not mount any token.
+
 
 
