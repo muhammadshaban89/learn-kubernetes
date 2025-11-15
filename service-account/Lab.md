@@ -103,6 +103,8 @@ spec:
    curl -sSk -H "Authorization: Bearer $TOKEN" https://kubernetes.default.svc/api/v1/namespaces/default/secrets
    ```
 
+   ❌ You should get a `403 Forbidden` — because the Role doesn't allow access to secrets.
+
 Note:
 ----
 
@@ -122,6 +124,4 @@ kubectl apply -f ./manifests/
 ```
 
 
-
-   ❌ You should get a `403 Forbidden` — because the Role doesn't allow access to secrets.
 
