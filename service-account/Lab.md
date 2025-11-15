@@ -105,6 +105,36 @@ spec:
 
    ❌ You should get a `403 Forbidden` — because the Role doesn't allow access to secrets.
 
+5: OR use below manifest :
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  namespace: default
+spec:
+  serviceAccountName: pod-reader
+  containers:
+  - name: nginx
+    image: nginx:1.25.3
+    ports:
+    - containerPort: 80
+   
+```
+And run : 
+```bash
+kubectl auth can-i <verb> <resource> --as=system:serviceaccount:<namespace>:<serviceaccount-name>
+```
+for my case:
+```
+kubectl auth can-i list pods --as=system:serviceaccount:default:pod-reader
+```
+- The answer should be **yes** as per role.
+- if you try to authenticate anyother permission that is not allowed in role, the answer will ne "no"
+
+
+
+
 Note:
 ----
 
