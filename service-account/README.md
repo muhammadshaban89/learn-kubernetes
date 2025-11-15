@@ -92,4 +92,3 @@ spec:
 ```
 
 
-Would you like a real-world lab setup to test ServiceAccount-based access control with RBAC and a sample pod? I can bundle a ready-to-apply YAML manifest for you.
