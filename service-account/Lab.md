@@ -145,7 +145,7 @@ If you want that pod not use this defalt service account- in specs mention:
 specs:
   automountServiceAccountToken: false
 ```
-after this even when you describe the pod, despite showing "serviceaccout=defult" k8s will not mount any token.
+after this ,when you describe the pod, despite showing "serviceaccout=defult" k8s will not mount any token.
 
 
 
