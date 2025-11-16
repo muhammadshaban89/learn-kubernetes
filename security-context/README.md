@@ -4,7 +4,7 @@ Security Context:
 
 * **In Kubernetes, a *SecurityContext* defines privilege and access control settings for a Pod or Container.** It’s a critical tool for enforcing least privilege, isolating workloads, and hardening your cluster against attacks.
 
-* * A security context defines privilege and access control settings for a Pod or Container. Security context settings include, but are not limited to:
+* A **security context** defines privilege and access control settings for a Pod or Container. Security context settings include, but are not limited to:
 
 *  **Discretionary Access Control:** Permission to access an object, like a file, is based on user ID (UID) and group ID (GID).
 
