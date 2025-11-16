@@ -1,9 +1,9 @@
 A bundled manifest for a Calico-enforced Kubernetes Pod using multi-container patterns and hardened `securityContext` settings. It includes:
 
 - ✅ Pod-level security: `runAsUser`, `fsGroup`, `runAsNonRoot`
-- 🔐 Container-level isolation: dropped capabilities, no privilege escalation
-- 🧭 Multi-container setup: Sidecar + Adapter pattern
-- 📦 Public images: `nginx` and `busybox` (validated)
+- ✅ Container-level isolation: dropped capabilities, no privilege escalation
+- ✅ Multi-container setup: Sidecar + Adapter pattern
+- ✅ Public images: `nginx` and `busybox` (validated)
 
 ---
 
