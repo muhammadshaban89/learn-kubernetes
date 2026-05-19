@@ -255,4 +255,9 @@ kubectl apply -f deployment.yaml
 ---
 
 # ⭐ Final Takeaway
-**Kubernetes = a distributed, self‑healing, declarative system that turns many machines into one unified compute platfor
+**Kubernetes = a distributed, self‑healing, declarative system that turns many machines into one unified compute platform.**
+
+
+
+
+
