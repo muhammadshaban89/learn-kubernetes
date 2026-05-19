@@ -1,5 +1,5 @@
 
-# ⭐ **What Is Kubernetes (K8s)? — The One‑Sentence Answer**
+# ⭐ **What Is Kubernetes (K8s)?**
 **Kubernetes is an open‑source, distributed system that automates deployment, scaling, and management of containerized applications across clusters of machines.** 
 
 But that sentence hides a *massive* architecture underneath.  
